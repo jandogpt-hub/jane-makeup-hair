@@ -64,7 +64,7 @@ require_once __DIR__ . '/config.php';
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;500;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <link rel="stylesheet" href="/assets/css/style.css">
@@ -73,17 +73,17 @@ require_once __DIR__ . '/config.php';
 
 <!-- ===== SITE HEADER / NAV ===== -->
 <header class="site-header" id="top">
-    <div class="header-inner">
+    <div class="container header-inner">
 
         <!-- Logo -->
-        <a href="/" class="site-logo" aria-label="<?php echo SITE_NAME; ?> — Home">
-            <span class="logo-name"><?php echo SITE_NAME; ?></span>
-            <span class="logo-tagline"><?php echo SITE_TAGLINE; ?></span>
+        <a href="/" class="logo" aria-label="<?php echo SITE_NAME; ?> — Home">
+            <span class="logo-name">JANE</span>
+            <span class="logo-tag">WeHo Exclusive</span>
         </a>
 
         <!-- Desktop Navigation -->
-        <nav class="site-nav" aria-label="Main navigation">
-            <ul class="nav-list">
+        <nav class="main-nav" aria-label="Main navigation">
+            <ul>
                 <li><a href="/">Home</a></li>
 
                 <!-- Services Dropdown -->
@@ -93,7 +93,7 @@ require_once __DIR__ . '/config.php';
                         <?php foreach ($services as $s): ?>
                         <li role="menuitem">
                             <a href="/services/<?php echo $s['slug']; ?>">
-                                <?php echo $s['icon']; ?> <?php echo $s['name']; ?> &rarr;
+                                <?php echo $s['name']; ?>
                             </a>
                         </li>
                         <?php endforeach; ?>
@@ -102,49 +102,31 @@ require_once __DIR__ . '/config.php';
 
                 <!-- Areas Dropdown -->
                 <li class="has-dropdown">
-                    <a href="#" aria-haspopup="true" aria-expanded="false">Areas Served</a>
+                    <a href="#" aria-haspopup="true" aria-expanded="false">Studio</a>
                     <ul class="dropdown" role="menu">
                         <?php foreach ($areas as $a): ?>
                         <li role="menuitem">
                             <a href="/area-served/<?php echo $a['slug']; ?>">
-                                <?php echo $a['name']; ?> &rarr;
+                                <?php echo $a['name']; ?>
                             </a>
                         </li>
                         <?php endforeach; ?>
                     </ul>
                 </li>
 
-                <li><a href="/gallery">Gallery</a></li>
-                <li><a href="/about">About</a></li>
+                <li><a href="/gallery">Folio</a></li>
+                <li><a href="/about">Jane</a></li>
             </ul>
+
+            <!-- CTA -->
+            <a href="/contact" class="btn btn-primary">Book</a>
         </nav>
 
-        <!-- CTA -->
-        <a href="/contact" class="btn btn-primary header-cta">Book Jane</a>
-
         <!-- Mobile Toggle -->
-        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
-            <span></span><span></span><span></span>
+        <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+            ☰
         </button>
 
     </div><!-- /.header-inner -->
-
-    <!-- Mobile Nav -->
-    <nav class="mobile-nav" aria-label="Mobile navigation" hidden>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li class="mobile-section-label">Services</li>
-            <?php foreach ($services as $s): ?>
-            <li><a href="/services/<?php echo $s['slug']; ?>"><?php echo $s['name']; ?></a></li>
-            <?php endforeach; ?>
-            <li class="mobile-section-label">Areas Served</li>
-            <?php foreach ($areas as $a): ?>
-            <li><a href="/area-served/<?php echo $a['slug']; ?>"><?php echo $a['name']; ?></a></li>
-            <?php endforeach; ?>
-            <li><a href="/gallery">Gallery</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/contact" class="btn btn-primary">Book Jane</a></li>
-        </ul>
-    </nav>
 </header>
 <!-- ===== END HEADER ===== -->
