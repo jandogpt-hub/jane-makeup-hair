@@ -1,0 +1,56 @@
+# Jane Makeup & Hair — Apache Configuration
+# Rewrite Rules, GZIP, and Browser Caching
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # Remove .php extension from URLs (301 redirect)
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)\.php [NC]
+    RewriteCond %{REQUEST_METHOD} !POST [NC]
+    RewriteRule ^ %1 [R=301,L]
+
+    # Serve extensionless URLs from .php files
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME}.php -f
+    RewriteRule ^(.*?)/?$ $1.php [L]
+
+    # Custom 404
+    ErrorDocument 404 /404.php
+</IfModule>
+
+# Enable GZIP Compression
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/javascript text/xml text/plain
+  AddOutputFilterByType DEFLATE image/x-icon image/svg+xml
+  AddOutputFilterByType DEFLATE application/rss+xml application/javascript application/x-javascript application/xml application/xhtml+xml
+  AddOutputFilterByType DEFLATE application/x-font application/x-font-truetype application/x-font-ttf application/x-font-otf application/x-font-opentype application/vnd.ms-fontobject
+  AddOutputFilterByType DEFLATE font/ttf font/otf font/opentype
+</IfModule>
+
+# Enable Browser Caching
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpg    "access 1 year"
+  ExpiresByType image/jpeg   "access 1 year"
+  ExpiresByType image/gif    "access 1 year"
+  ExpiresByType image/png    "access 1 year"
+  ExpiresByType image/webp   "access 1 year"
+  ExpiresByType image/svg+xml "access 1 year"
+  ExpiresByType image/x-icon "access 1 year"
+  ExpiresByType text/css     "access 1 month"
+  ExpiresByType text/javascript         "access 1 month"
+  ExpiresByType application/javascript  "access 1 month"
+  ExpiresByType font/woff2   "access 1 year"
+  ExpiresByType application/vnd.ms-fontobject "access 1 year"
+  ExpiresByType application/x-font-ttf        "access 1 year"
+  ExpiresByType application/x-font-woff       "access 1 year"
+  ExpiresDefault "access 2 days"
+</IfModule>
+
+# Security Headers
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
