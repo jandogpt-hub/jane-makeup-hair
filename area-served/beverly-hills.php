@@ -3,6 +3,7 @@
  * Jane Makeup & Hair — Area Served: Beverly Hills
  */
 define('allowed', true);
+require_once __DIR__ . '/../includes/config.php';
 $city            = 'Beverly Hills';
 $pageTitle       = "Makeup Artist Beverly Hills | Jane Makeup & Hair";
 $pageDescription = "Luxury mobile makeup artist and hairstylist serving Beverly Hills, CA. Bridal, event, and editorial beauty delivered to your hotel or home. Book Jane today.";

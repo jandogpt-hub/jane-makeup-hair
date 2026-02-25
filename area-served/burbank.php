@@ -1,4 +1,5 @@
-<?php define('allowed', true); $city = 'Burbank';
+<?php define('allowed', true);
+require_once __DIR__ . '/../includes/config.php'; $city = 'Burbank';
 $pageTitle = 'Makeup Artist Burbank | Jane Makeup & Hair';
 $pageDescription = 'Mobile makeup artist and hairstylist serving Burbank, CA. On-location beauty for weddings, TV productions, and events. Book Jane today.';
 $pageSchema = json_encode(['@context'=>'https://schema.org','@type'=>'BeautySalon','name'=>SITE_NAME,'telephone'=>SITE_PHONE,'areaServed'=>[['@type'=>'City','name'=>$city.', CA']],'url'=>SITE_URL.'/area-served/burbank','priceRange'=>'$$']);

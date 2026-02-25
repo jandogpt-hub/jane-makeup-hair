@@ -1,4 +1,5 @@
-<?php define('allowed', true); $city = 'Los Angeles';
+<?php define('allowed', true);
+require_once __DIR__ . '/../includes/config.php'; $city = 'Los Angeles';
 $pageTitle = 'Mobile Makeup Artist Los Angeles | Jane Makeup & Hair';
 $pageDescription = 'Luxury mobile makeup artist and hairstylist serving all of Los Angeles, CA. Bridal, event, editorial, and everyday beauty — delivered to your location. 5.0 Google rating. Book Jane today.';
 $pageSchema = json_encode(['@context'=>'https://schema.org','@type'=>'BeautySalon','name'=>SITE_NAME,'telephone'=>SITE_PHONE,'areaServed'=>[['@type'=>'City','name'=>$city.', CA']],'url'=>SITE_URL.'/area-served/los-angeles','priceRange'=>'$$']);

@@ -3,6 +3,7 @@
  * Jane Makeup & Hair — Area Served: West Hollywood
  */
 define('allowed', true);
+require_once __DIR__ . '/../includes/config.php';
 $city            = 'West Hollywood';
 $pageTitle       = "Makeup Artist West Hollywood | Jane Makeup & Hair";
 $pageDescription = "Mobile makeup artist and hairstylist serving West Hollywood, CA. Bridal, event, and photoshoot beauty delivered to your location. Book Jane today.";

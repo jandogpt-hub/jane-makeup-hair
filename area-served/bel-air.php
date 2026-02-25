@@ -1,4 +1,5 @@
-<?php define('allowed', true); $city = 'Bel Air';
+<?php define('allowed', true);
+require_once __DIR__ . '/../includes/config.php'; $city = 'Bel Air';
 $pageTitle = 'Makeup Artist Bel Air | Jane Makeup & Hair';
 $pageDescription = 'Luxury mobile makeup artist serving Bel Air, CA. High-end beauty for private estates, weddings, and events. Jane comes to you.';
 $pageSchema = json_encode(['@context'=>'https://schema.org','@type'=>'BeautySalon','name'=>SITE_NAME,'telephone'=>SITE_PHONE,'areaServed'=>[['@type'=>'City','name'=>$city.', CA']],'url'=>SITE_URL.'/area-served/bel-air','priceRange'=>'$$']);

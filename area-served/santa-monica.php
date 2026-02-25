@@ -1,4 +1,5 @@
-<?php define('allowed', true); $city = 'Santa Monica';
+<?php define('allowed', true);
+require_once __DIR__ . '/../includes/config.php'; $city = 'Santa Monica';
 $pageTitle = 'Makeup Artist Santa Monica | Jane Makeup & Hair';
 $pageDescription = 'Mobile makeup artist serving Santa Monica, CA. Bridal, event, and photoshoot beauty delivered to your beachside hotel or home. Book Jane.';
 $pageSchema = json_encode(['@context'=>'https://schema.org','@type'=>'BeautySalon','name'=>SITE_NAME,'telephone'=>SITE_PHONE,'areaServed'=>[['@type'=>'City','name'=>$city.', CA']],'url'=>SITE_URL.'/area-served/santa-monica','priceRange'=>'$$']);

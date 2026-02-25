@@ -1,4 +1,5 @@
-<?php define('allowed', true); $city = 'Studio City';
+<?php define('allowed', true);
+require_once __DIR__ . '/../includes/config.php'; $city = 'Studio City';
 $pageTitle = 'Makeup Artist Studio City | Jane Makeup & Hair';
 $pageDescription = 'Mobile makeup artist and hairstylist serving Studio City, CA. Bridal, event, and TV production beauty delivered to your location.';
 $pageSchema = json_encode(['@context'=>'https://schema.org','@type'=>'BeautySalon','name'=>SITE_NAME,'telephone'=>SITE_PHONE,'areaServed'=>[['@type'=>'City','name'=>$city.', CA']],'url'=>SITE_URL.'/area-served/studio-city','priceRange'=>'$$']);
