@@ -1,74 +1,91 @@
 <?php
 /**
- * Jane Makeup & Hair - Global Footer partial.
- * Auto-builds service and area columns from $services and $areas in config.php.
+ * Jane Makeup & Hair — Global Footer Partial.
+ * Inspired by DT Painter framework, styled for Jane.
  */
 if (!defined('allowed')) { header('Location: /'); exit; }
 ?>
-
-<!-- ===== SITE FOOTER ===== -->
-<footer class="site-footer">
-    <div class="container">
-        <div class="footer-grid">
-
-            <!-- Brand Column -->
-            <div class="footer-col">
-                <span style="font-size: 1.5rem; font-weight: 800; letter-spacing: -0.03em; text-transform: uppercase; color: var(--color-text); margin-bottom: 0.5rem; display:block;">JANE</span>
-                <p class="font-mono text-orange" style="font-size: 0.6rem; margin-bottom: 1.5rem;">WeHo Exclusive</p>
-                <p style="font-size: 0.95rem; color: var(--color-text-muted); margin-bottom: 1.5rem;">Licensed hairstylist &amp; professional makeup artist serving West Hollywood, Beverly Hills, Burbank, and all of greater Los Angeles. 15+ years of TV production experience — delivered to your door.</p>
-                <!-- Social Links -->
-                <div style="display: flex; gap: 1rem;">
-                    <a href="<?php echo SOCIAL_INSTAGRAM; ?>" target="_blank" rel="noopener" aria-label="Instagram" style="opacity: 0.5; transition: opacity 0.3s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.5">IG</a>
-                    <a href="<?php echo SOCIAL_YELP; ?>"      target="_blank" rel="noopener" aria-label="Yelp" style="opacity: 0.5; transition: opacity 0.3s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.5">YELP</a>
-                    <a href="<?php echo SOCIAL_YOUTUBE; ?>"   target="_blank" rel="noopener" aria-label="YouTube" style="opacity: 0.5; transition: opacity 0.3s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.5">YT</a>
-                    <a href="<?php echo SOCIAL_PINTEREST; ?>" target="_blank" rel="noopener" aria-label="Pinterest" style="opacity: 0.5; transition: opacity 0.3s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.5">PIN</a>
+    <!-- BEGIN: Footer -->
+    <footer class="bg-[#110A08] border-t border-white/5 pt-24 pb-12 text-white relative z-10">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
+            <div class="space-y-6">
+                <!-- Logo/Brand Area -->
+                <div class="flex items-center gap-2 mb-8">
+                    <span class="material-symbols-outlined text-primary text-3xl">flare</span>
+                    <h2 class="text-2xl font-bold tracking-tighter uppercase italic">Jane</h2>
+                </div>
+                <p class="text-white/40 text-sm leading-relaxed max-w-xs">
+                    Elite makeup and hair artistry for the red carpet and beyond. Sculpting the West Hollywood identity.
+                </p>
+                <div class="flex gap-4 pt-4">
+                    <a class="text-white/40 hover:text-primary transition-colors font-bold uppercase tracking-widest text-[10px]" href="<?php echo defined('SOCIAL_INSTAGRAM') ? SOCIAL_INSTAGRAM : '#'; ?>">Instagram</a>
+                    <a class="text-white/40 hover:text-primary transition-colors font-bold uppercase tracking-widest text-[10px]" href="<?php echo defined('SOCIAL_YOUTUBE') ? SOCIAL_YOUTUBE : '#'; ?>">YouTube</a>
+                    <a class="text-white/40 hover:text-primary transition-colors font-bold uppercase tracking-widest text-[10px]" href="<?php echo defined('SOCIAL_YELP') ? SOCIAL_YELP : '#'; ?>">Yelp</a>
                 </div>
             </div>
-
-            <!-- Services Column -->
-            <div class="footer-col">
-                <h3>Services</h3>
-                <ul>
-                    <?php foreach ($services as $s): ?>
-                    <li><a href="/services/<?php echo $s['slug']; ?>"><?php echo $s['name']; ?></a></li>
-                    <?php endforeach; ?>
+            
+            <div>
+                <h4 class="text-xs font-bold tracking-widest uppercase mb-8 text-white mt-2">Our Artistry</h4>
+                <ul class="space-y-4 text-sm text-white/50 font-medium">
+                    <?php if(!empty($services)): foreach($services as $s): ?>
+                        <li><a class="hover:text-primary transition-colors" href="/services/<?php echo $s['slug']; ?>.php"><?php echo $s['name']; ?></a></li>
+                    <?php endforeach; endif; ?>
                 </ul>
             </div>
-
-            <!-- Areas Column -->
-            <div class="footer-col">
-                <h3>Areas Served</h3>
-                <ul>
-                    <?php foreach ($areas as $a): ?>
-                    <li><a href="/area-served/<?php echo $a['slug']; ?>"><?php echo $a['name']; ?></a></li>
-                    <?php endforeach; ?>
+            
+            <div>
+                <h4 class="text-xs font-bold tracking-widest uppercase mb-8 text-white mt-2">Studio Locations</h4>
+                <ul class="space-y-4 text-sm text-white/50 font-medium">
+                    <?php if(!empty($areas)): foreach($areas as $a): ?>
+                        <li><a class="hover:text-primary transition-colors" href="/area-served/<?php echo $a['slug']; ?>.php"><?php echo $a['name']; ?></a></li>
+                    <?php endforeach; endif; ?>
                 </ul>
             </div>
-
-            <!-- Contact Column -->
-            <div class="footer-col">
-                <h3>Contact</h3>
-                <ul style="margin-bottom: 1.5rem;">
-                    <li><a href="tel:<?php echo phoneRaw(); ?>"><?php echo SITE_PHONE; ?></a></li>
-                    <li><a href="mailto:<?php echo SITE_EMAIL; ?>"><?php echo SITE_EMAIL; ?></a></li>
-                    <li style="color: var(--color-text-muted); font-size: 0.95rem;"><?php echo BUSINESS_ADDRESS; ?></li>
-                </ul>
-                <a href="/contact" class="btn btn-outline" style="padding: 0.75rem 1.5rem; font-size: 0.75rem;">Secure Session</a>
+            
+            <div>
+                <h4 class="text-xs font-bold tracking-widest uppercase mb-8 text-white mt-2">Join the Glow List</h4>
+                <p class="text-sm text-white/50 mb-4 leading-relaxed">Join our VIP list for exclusive booking availability.</p>
+                <form action="/index.php#footer" method="POST" class="flex flex-col gap-2">
+                    <div class="flex gap-2">
+                        <input name="email" class="bg-white/5 border border-white/10 rounded-lg flex-1 px-4 text-sm focus:ring-primary focus:border-primary text-white" placeholder="Your email" type="email" required />
+                        <button type="submit" class="bg-primary px-4 py-2 rounded-lg font-bold text-xs uppercase cursor-pointer hover:bg-white hover:text-primary transition-colors text-white">Join</button>
+                    </div>
+                    <?php if (isset($newsletter_msg) && !empty($newsletter_msg)): ?>
+                        <p class="text-xs text-primary mt-2"><?= htmlspecialchars($newsletter_msg) ?></p>
+                    <?php endif; ?>
+                </form>
             </div>
-
-        </div><!-- /.footer-grid -->
-
-        <div class="footer-bottom">
-            <p>&copy; <?php echo currentYear(); ?> <?php echo SITE_NAME; ?>. All Rights Reserved.</p>
-            <nav aria-label="Footer legal">
-                <a href="/privacy">Privacy Policy</a>
-                <a href="/terms">Terms</a>
-            </nav>
         </div>
-    </div>
-</footer>
-<!-- ===== END FOOTER ===== -->
-
-<script src="/assets/js/main.js"></script>
+        
+        <div class="max-w-7xl mx-auto px-6 pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+            <p class="text-[10px] text-white/20 tracking-widest uppercase text-center md:text-left">© <?php echo date('Y'); ?> Jane Makeup & Hair Artistry. All Rights Reserved.</p>
+            <div class="flex gap-8">
+                <a class="text-[10px] text-white/20 tracking-widest uppercase hover:text-white transition-colors" href="#">Privacy Policy</a>
+                <a class="text-[10px] text-white/20 tracking-widest uppercase hover:text-white transition-colors" href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+    <!-- END: Footer -->
+    
+    <!-- Mobile Bottom Navigation (Legacy fallback if needed, but the DT Painter mobile menu is the primary UX) -->
+    <nav class="fixed bottom-0 left-0 right-0 z-40 bg-[#110A08]/95 backdrop-blur-md flex items-center justify-around px-4 py-3 border-t border-white/10 pb-8 sm:pb-3 md:hidden">
+        <a class="flex flex-col items-center gap-1 text-primary" href="/">
+            <span class="material-symbols-outlined text-2xl">home</span>
+            <span class="text-[10px] font-bold uppercase tracking-tighter">Home</span>
+        </a>
+        <a class="flex flex-col items-center gap-1 text-white/40 hover:text-primary transition-colors" href="/contact.php">
+            <span class="material-symbols-outlined text-2xl">auto_awesome</span>
+            <span class="text-[10px] font-bold uppercase tracking-tighter">Book</span>
+        </a>
+        <a class="flex flex-col items-center gap-1 text-white/40 hover:text-primary transition-colors" href="/gallery.php">
+            <span class="material-symbols-outlined text-2xl">photo_library</span>
+            <span class="text-[10px] font-bold uppercase tracking-tighter">Gallery</span>
+        </a>
+        <a class="flex flex-col items-center gap-1 text-white/40 hover:text-primary transition-colors" href="/about.php">
+            <span class="material-symbols-outlined text-2xl">account_circle</span>
+            <span class="text-[10px] font-bold uppercase tracking-tighter">Jane</span>
+        </a>
+    </nav>
+    
 </body>
 </html>

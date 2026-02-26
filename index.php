@@ -1,189 +1,164 @@
 <?php
 /**
  * Jane Makeup & Hair — Homepage
+ * Modular entry point: includes header.php and footer.php partials.
+ * Contains the Hero, Services, Gallery, and Location sections.
  */
 define('allowed', true);
-$pageTitle       = 'Jane Makeup & Hair | Luxury Mobile Makeup Artist Los Angeles';
-$pageDescription = 'Red carpet makeup and hair delivered to you in West Hollywood, Beverly Hills, Burbank, and all of Los Angeles. Licensed hairstylist with 15+ years of TV production experience. Book your session today.';
+
+// ── Newsletter Form Handler ──────────────────────────────────────────
+$newsletter_msg = '';
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['email'])) {
+    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+    if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $newsletter_msg = "Thanks for joining the Glow List!";
+    } else {
+        $newsletter_msg = "Please enter a valid email.";
+    }
+}
+
+// ── Page Meta ────────────────────────────────────────────────────────
+$pageTitle       = 'JANE | West Hollywood Editorial Beauty';
+$pageDescription = 'Elite makeup and hair artistry for the red carpet and beyond. West Hollywood, CA.';
+
+// ── Include Header (loads config.php which defines $services & $areas for nav) ──
 require_once __DIR__ . '/includes/header.php';
+
+// ── Data: Homepage Signature Services (separate from config nav $services) ──
+$homepage_services = [
+    [
+        'type'  => 'image',
+        'title' => 'Makeup Artistry',
+        'desc'  => 'From red carpet glam to natural radiance.',
+        'image' => 'https://lh3.googleusercontent.com/aida-public/AB6AXuDvnLwKJR7rLyhDG32C6506etHyf8WMoAej3gJq1AwfeJcK4DwcO2sPmipgWS6o5lhJ3FI3gGlnY4h9VigwJjs6Tb80JaKwtQByanVD1u7N_rUxMs43H9FLh6y7Z4fLZKonQRT15HshQDBwvLx3yjQqM5iS1QA8X4WoZhSFnIpOeOTjbAgYqUZCAMZknsUpE2fLGAfj1jFfgo0DLQ8ST0U5XdEGw0G5lICWaXNg9rp4NdskAiWpLqUmX_oUa_qS0lc9WQYp2tFIPRu6',
+        'alt'   => 'Close up of editorial makeup artistry'
+    ],
+    [
+        'type'  => 'image',
+        'title' => 'Hair Styling',
+        'desc'  => 'Sculpted waves, sleek finishes, and updos.',
+        'image' => 'https://lh3.googleusercontent.com/aida-public/AB6AXuCD030aZGzH22P7pESdF2OTwIZ3xk7WV9zuxeyGgolwQWdlFQK15codwglyJAqGISiC65DCkE8dP7duM230jhioaCkVVKZSjA4HfXFzTteECG0hKZKcaXtUOrhtyFT8xMHWuZDlH8SftdSZ_rpA3p6OpsXDwLwETegablRwAY7PG7Jxp3YdRtsUynJ1AlpFkDZRk-5G9LNzrK4GI9ndypqIvCp8nrLTTpf2Wk4R2EQi2X0Y-1awXZlGFSXQxfAcAOqHhKoTwtWDcl4N',
+        'alt'   => 'Professional hair styling session in studio'
+    ],
+    [
+        'type'   => 'feature',
+        'title'  => 'VIP Concierge',
+        'desc'   => 'On-location services for private events, weddings, and high-profile bookings.',
+        'icon'   => 'diamond',
+        'button' => 'Inquire Now'
+    ]
+];
+
+// ── Data: Gallery Images ─────────────────────────────────────────────
+$gallery_images = [
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuAmfVVE-H0flAWmrMj0Z64Z2BxCmtWjfy5YfWb2NlwHa-RGjsS9B6-m1YbL3rF9TXrMkFXjcXTPVKAXdE4e0GOzDoJc85uq4-ALKsrkvoV3Nmw7InFjfBTFiv8WN70RghezCo4rdlUSneqB_VYlJlKbKIFgoVTwrxEhBoKXWZ3QCv-0N0sR2YVzTmJAbezjgISLQFUKwYcBHLzDhy1dzG3Cnc7OdH1Xh-xE1T9vvrNMsO_urtPNnTL--TDNHFI4jv2eF9rJRWuelsf7",
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuAzb6lZFyRURcJLnOJgGrVYRv7SL40rQwkGRhfCtsyo2BWtv-OInFcHnvvliCWRme2K1Oxy-LwYpeH6Eyw9-cXl623p0IuVPnOib7wvKPrQDqqSnVpAcA5BRf-wb8ekhm0uKJFaHZuGnH15SmlFS0sP2JALbk3z13RO73OJu2_HFUBu56iYZDZNe1o0_gxt45BcCb2f9rRkQ0oq_N3JQ4QJoOJ22bPaqh-DRE1JTNLOF4LnInRA0NEkMTRgZ9eQQbmoQ7AA_Ma6D0Gq",
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuBwlLPtHPR5GhIag5igpzzUt8B4PLej_sU5oAk8o30zoHyduiP_PlqX0eBTIH6TGLcJ94TxT_aVIdARmY9Ed5KA90YdlFnmYyIeKWZP9pJnyHtwK3n235Dzf-Y6HfKa1P_ve7iFLQXoS8IubY_0wbmyTJHl3tcKQi_G0YMOYon8R1XyqURFZUpwpW_ZE5O5ow0llMGM_c8ERovaFyQahPruZLnCbXuU2eR0ywR70wk4XEnOk5vzl6cNgu_BINPcve28llZ9teoVIA6E",
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuCL3Xx83vw0yY94XPZ1cABZVkyyrFpLSZw6CcIFIwsXTHbFLYZ1yGrJGC0vaaQThJ1Lbz2Tb1I2L1vZQiNXsYItd6BpP7_iOa9CmeDZCA8i6cHD8MZP5hcX4mYWHLkUF1OxNir1zAIiFD9Vn2FkwyVPHgUqppeGwZ7Zjom0QgN313zNfp0Gm8GRnZl7Rgi0Cfsco7IQ51fiimdRB0PMA3rkEqElVtbL3FQfpZCPSdphjIPt1VrUjLML1YI5Tn4VPsk23Wu5lUhbrpmg"
+];
 ?>
 
-<main>
-
-    <!-- ===== HERO ===== -->
-    <section class="hero-section">
-        <!-- Dynamic Background (Pure CSS Marquee) -->
-        <div class="hero-background"></div>
-        <div class="hero-gradient-overlay"></div>
-        
-        <div class="marquee-container">
-            <?php 
-                // Images from React prototype
-                $col1 = [
-                    "https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?auto=format&fit=crop&q=80&w=800",
-                    "https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?auto=format&fit=crop&q=80&w=800",
-                    "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=800",
-                    "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&q=80&w=800"
-                ];
-                $col2 = [
-                    "https://images.unsplash.com/photo-1620331311520-246422fd82f9?auto=format&fit=crop&q=80&w=800",
-                    "https://images.unsplash.com/photo-1596704017254-9b121068fb31?auto=format&fit=crop&q=80&w=800",
-                    "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&q=80&w=800",
-                    "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&q=80&w=800"
-                ];
-                $col3 = [
-                    "https://images.unsplash.com/photo-1512496011212-721d0b3272dd?auto=format&fit=crop&q=80&w=800",
-                    "https://images.unsplash.com/photo-1605763240004-7e93b172d754?auto=format&fit=crop&q=80&w=800",
-                    "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=800",
-                    "https://images.unsplash.com/photo-1519699047748-40baea26f85f?auto=format&fit=crop&q=80&w=800"
-                ];
-                
-                function renderMarquee($images, $duration, $reverse) {
-                    $class = $reverse ? 'marquee-track reverse' : 'marquee-track';
-                    $html = '<div class="marquee-col"><div class="'.$class.'" style="animation-duration: '.$duration.'s">';
-                    // Double array to create seamless loop
-                    $loop = array_merge($images, $images);
-                    $html .= '<div class="marquee-track-inner">';
-                    foreach($loop as $src) {
-                        $html .= '<img src="'.$src.'" loading="lazy" alt="">';
-                    }
-                    $html .= '</div></div></div>';
-                    echo $html;
-                }
-            ?>
-            
-            <?php renderMarquee($col1, 45, false); ?>
-            <?php renderMarquee($col2, 35, true); ?>
-            <?php renderMarquee($col3, 50, false); ?>
+    <!-- ===== HERO SECTION ===== -->
+    <section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-background-dark/20 to-background-dark z-10"></div>
+            <img class="w-full h-full object-cover scale-110 filter grayscale brightness-75" alt="Avant-garde editorial portrait with high fashion makeup" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJ6eneh4LnBKd7I9Rs4hPaBvOL0u_ZV7Q8aD9ET-8Gw07yZP8nQAjxXTQFcFwVC6GZ7NzKI3zO3_fuL_7sl4yF-aIxE8aOFdU8wtl5VcYo7QsvBTp38MQJL_mbkMgBqPrhFzVgQALAlA5N-kpqfCs3t-Qp9uhIgOYF-mOMxYDapIjH_hQhdP4vQRYWQDSDKB62YFLBrPOrn2ZX3LDJQ_QRTdBbq50OtVYgJn602AfRNFEYxfnogzonmnhCRcN8AFJx7cmk7r1naYF6"/>
         </div>
-        
-        <div class="container hero-content" style="z-index: 10;">
-            <div class="hero-badge">
-                <span class="font-mono font-bold tracking-widest uppercase">West Hollywood Exclusive</span>
-            </div>
-            
-            <h1 class="hero-title">JANE<br>WEHO</h1>
-            
-            <div style="margin-top: 2rem;">
-                <h2 style="font-size: 2rem; color: #fff; margin-bottom: 0.5rem;">
-                    The <span class="text-orange">Noir</span> VIP Experience.
-                </h2>
-                <p class="font-mono text-muted" style="max-width: 400px; margin: 0 auto; line-height: 1.6;">
-                    Elite makeup and hair artistry for the red carpet and beyond.
-                </p>
-            </div>
-            
-            <div style="margin-top: 3rem;">
-                <a href="/contact" class="btn btn-primary">Secure Your Session &rarr;</a>
-            </div>
+        <div class="relative z-20 text-center px-4">
+            <h1 class="text-[12vw] md:text-[18vw] font-bold leading-none uppercase tracking-tighter mb-[-2vw]">
+                <span class="block">Jane</span>
+                <span class="text-outline block mt-[-4vw]">Studio</span>
+            </h1>
+            <p class="text-sm md:text-xl uppercase tracking-[0.5em] font-light mt-8 md:mt-0 opacity-80">
+                Sculpting the West Hollywood Identity
+            </p>
         </div>
-        
-        <div style="position: absolute; bottom: 2rem; right: 2rem; writing-mode: vertical-rl; text-transform: uppercase; letter-spacing: 0.3em; font-family: var(--font-mono); font-size: 0.6rem; color: var(--color-text-muted); border-right: 1px solid var(--color-glass-border); padding-right: 10px;">
-            34.0923&deg; N, 118.3693&deg; W
+        <div class="absolute bottom-10 left-10 z-20 hidden md:block">
+            <div class="flex flex-col gap-4">
+                <div class="h-px w-24 bg-primary/50"></div>
+                <p class="text-[10px] uppercase tracking-widest opacity-60">Est. 2026 / LA</p>
+            </div>
         </div>
     </section>
 
     <!-- ===== SERVICES GRID ===== -->
-    <section class="section section--glass">
-        <div class="container">
-            <h2 style="text-align: center; margin-bottom: 1rem;">Services</h2>
-            <p class="font-mono text-muted" style="text-align: center; margin-bottom: 3rem;">Jane arrives wherever you need her.</p>
-            <ul class="services-grid">
-                <?php foreach ($services as $s): ?>
-                <li class="service-card">
-                    <span style="font-size: 2rem; display: block; margin-bottom: 1rem;"><?php echo $s['icon']; ?></span>
-                    <h3><?php echo $s['name']; ?></h3>
-                    <a href="/services/<?php echo $s['slug']; ?>">Learn More &rarr;</a>
-                </li>
-                <?php endforeach; ?>
-            </ul>
+    <section class="px-6 py-20 bg-background-dark relative">
+        <div class="flex items-end justify-between mb-12">
+            <div>
+                <h3 class="text-xs font-bold text-primary uppercase tracking-widest mb-2">Our Artistry</h3>
+                <h2 class="text-3xl font-bold tracking-tight">Signature Services</h2>
+            </div>
+            <a class="text-primary text-sm font-bold border-b border-primary pb-1" href="#">See All</a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <?php foreach ($homepage_services as $service): ?>
+                <?php if ($service['type'] === 'image'): ?>
+                    <div class="group relative aspect-[4/5] overflow-hidden rounded-xl glass border-white/5">
+                        <img class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-110 transition-transform duration-700" alt="<?= htmlspecialchars($service['alt']) ?>" src="<?= $service['image'] ?>"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent"></div>
+                        <div class="absolute bottom-6 left-6 right-6">
+                            <h4 class="text-xl font-bold mb-1"><?= $service['title'] ?></h4>
+                            <p class="text-white/60 text-sm mb-4"><?= $service['desc'] ?></p>
+                            <div class="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-primary transition-colors">
+                                <span class="material-symbols-outlined text-sm">add</span>
+                            </div>
+                        </div>
+                    </div>
+                <?php else: ?>
+                    <div class="group relative aspect-[4/5] overflow-hidden rounded-xl bg-primary/10 border border-primary/20">
+                        <div class="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary via-transparent to-transparent"></div>
+                        <div class="absolute inset-0 flex flex-col items-center justify-center p-8 text-center">
+                            <span class="material-symbols-outlined text-primary text-5xl mb-4"><?= $service['icon'] ?></span>
+                            <h4 class="text-2xl font-bold mb-2"><?= $service['title'] ?></h4>
+                            <p class="text-white/70 text-sm mb-6 leading-relaxed"><?= $service['desc'] ?></p>
+                            <button class="bg-primary text-white px-6 py-3 rounded-lg font-bold text-sm tracking-wide"><?= $service['button'] ?></button>
+                        </div>
+                    </div>
+                <?php endif; ?>
+            <?php endforeach; ?>
         </div>
     </section>
 
-    <!-- ===== LOGOS / PROOF ===== -->
-    <section class="section" style="text-align: center;">
-        <div class="container">
-            <h3 class="font-mono text-muted" style="margin-bottom: 3rem;">As Seen In Production</h3>
-            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 4rem; opacity: 0.5; filter: grayscale(100%);">
-                <span style="font-family: var(--font-syne); font-weight: 800; font-size: 1.5rem;">VOGUE</span>
-                <span style="font-family: var(--font-syne); font-weight: 800; font-size: 1.5rem;">NETFLIX</span>
-                <span style="font-family: var(--font-syne); font-weight: 800; font-size: 1.5rem;">HBO</span>
-                <span style="font-family: var(--font-syne); font-weight: 800; font-size: 1.5rem;">Vanity Fair</span>
+    <!-- ===== GALLERY ===== -->
+    <section class="py-20 px-6 overflow-hidden bg-background-dark/50">
+        <h2 class="text-center text-xs font-bold text-primary uppercase tracking-[0.3em] mb-12">Seen on the Strip</h2>
+        <div class="flex gap-4 overflow-x-auto pb-8 snap-x no-scrollbar">
+            <?php foreach ($gallery_images as $index => $img_src): ?>
+                <div class="min-w-[280px] aspect-square rounded-lg overflow-hidden snap-center flex-shrink-0">
+                    <img class="w-full h-full object-cover" alt="Gallery image <?= $index + 1 ?>" src="<?= $img_src ?>"/>
+                </div>
+            <?php endforeach; ?>
+        </div>
+    </section>
+
+    <!-- ===== LOCATION ===== -->
+    <section class="px-6 py-20 bg-background-dark">
+        <div class="glass p-8 rounded-xl flex flex-col md:flex-row items-center gap-10">
+            <div class="flex-1">
+                <h2 class="text-3xl font-bold mb-4 tracking-tight">Visit the Studio</h2>
+                <p class="text-white/60 mb-6 leading-relaxed">Located in the heart of West Hollywood, our studio is a sanctuary for beauty and self-expression. Appointments recommended.</p>
+                <div class="space-y-4 mb-8">
+                    <div class="flex items-center gap-4">
+                        <span class="material-symbols-outlined text-primary">location_on</span>
+                        <span class="text-sm font-medium">8400 Sunset Blvd, West Hollywood, CA</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <span class="material-symbols-outlined text-primary">schedule</span>
+                        <span class="text-sm font-medium">Daily: 9:00 AM — 8:00 PM</span>
+                    </div>
+                </div>
+                <button class="w-full md:w-auto px-8 py-4 bg-white/5 border border-white/10 rounded-xl font-bold text-sm flex items-center justify-center gap-2 hover:bg-white/10 transition-all">
+                    Get Directions <span class="material-symbols-outlined text-sm">open_in_new</span>
+                </button>
+            </div>
+            <div class="w-full md:w-1/3 aspect-square rounded-xl overflow-hidden grayscale opacity-80 border border-white/10">
+                <img class="w-full h-full object-cover" alt="Map of West Hollywood area" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChn851DvloK6_gfTUU5teWxuPzAqwZ9no1bLD65JGD2iJHzZX1IC3uWxNgzqDElNju5527EFirkZEYPIjxLJQXOgHn9xpyvMJjZ_sc7iNv-QkxT0uUblHr8yxfdvpSxzJgozmgECvwN7BWGaK8x5-ms7r7OUOeJQ051NDceExM1dTPApKria8Cy3C4Wg3jiqaXnaL9srsluWyQ57u2KUammM-n2d-5DvtxQKjXvN4I-AveVa7OcfVy79q8zbSB_JtbKYIg6LUEnLhc"/>
             </div>
         </div>
     </section>
 
-    <!-- ===== WHY JANE ===== -->
-    <section class="section">
-        <div class="container">
-            <h2>Why Clients Choose Jane</h2>
-            <ul class="benefits-grid">
-                <li class="benefit">
-                    <h3>She Comes to You</h3>
-                    <p>No salon trips on your most stressful morning. Jane arrives fully equipped — professional lighting rig, styling chair, complete pro kit — and sets up wherever you are.</p>
-                </li>
-                <li class="benefit">
-                    <h3>15+ Years of TV-Level Craft</h3>
-                    <p>Camera-ready results are Jane’s default. Her background in TV and film productions means your look will photograph flawlessly under any lighting or lens.</p>
-                </li>
-                <li class="benefit">
-                    <h3>Looks That Last All Day</h3>
-                    <p>Clients verify it repeatedly: makeup that holds through tears, dancing, and a full 12-hour event — without a single touch-up.</p>
-                </li>
-                <li class="benefit">
-                    <h3>Soft Glam, Not Theatrical</h3>
-                    <p>Jane specializes in natural looks and soft glam — the best version of you, not a mask. Clients often say &ldquo;I looked like myself, just polished.&rdquo;</p>
-                </li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- ===== REVIEWS ===== -->
-    <section class="section section--glass">
-        <div class="container">
-            <h2 style="text-align: center;">What Clients Say</h2>
-            <ul class="reviews-grid">
-                <li class="review-card">
-                    <p>&ldquo;Jane came to do hair and makeup for me and my flower-girl daughter ahead of a wedding. She perfectly translated my description into a chic updo and great face. I looked like myself, but polished — which is exactly what I wanted.&rdquo;</p>
-                    <footer>— Katy H., San Francisco &nbsp; ⭐⭐⭐⭐⭐</footer>
-                </li>
-                <li class="review-card">
-                    <p>&ldquo;We hired Jane for our wedding. The makeup lasted all day and night (almost 12 hours!) and even when we cried, it remained flawless. I can’t recommend her enough.&rdquo;</p>
-                    <footer>— Joie C., Seattle &nbsp; ⭐⭐⭐⭐⭐</footer>
-                </li>
-                <li class="review-card">
-                    <p>&ldquo;She styled my hair for the Elton John AIDS Foundation after-party and I couldn’t have been happier. Such a calm, lovely presence to have around while getting ready.&rdquo;</p>
-                    <footer>— Arianna S., Las Vegas &nbsp; ⭐⭐⭐⭐⭐</footer>
-                </li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- ===== AREAS SERVED ===== -->
-    <section class="section">
-        <div class="container">
-            <h2>Areas Jane Serves</h2>
-            <p class="font-mono text-muted" style="margin-bottom: 2rem;">Jane is 100% mobile across greater Los Angeles.</p>
-            <ul class="areas-list">
-                <?php foreach ($areas as $a): ?>
-                <li><a href="/area-served/<?php echo $a['slug']; ?>"><?php echo $a['name']; ?></a></li>
-                <?php endforeach; ?>
-            </ul>
-        </div>
-    </section>
-
-    <!-- ===== FINAL CTA ===== -->
-    <section class="section" style="border-top: 1px solid var(--color-glass-border);">
-        <div class="container" style="text-align:center;">
-            <h2 style="font-size: clamp(3rem, 8vw, 6rem); line-height: 1;">Ready to Look<br><span class="text-orange">Stunning?</span></h2>
-            <p style="margin: 2rem auto; max-width: 500px;">Tell Jane about your event and she’ll get back to you within 24 hours.</p>
-            <div style="display:flex; gap:1.5rem; justify-content:center; flex-wrap:wrap; margin-top: 3rem;">
-                <a href="/contact" class="btn btn-primary">Book Your Session &rarr;</a>
-                <a href="tel:<?php echo phoneRaw(); ?>" class="btn btn-outline"><?php echo SITE_PHONE; ?></a>
-            </div>
-        </div>
-    </section>
-
-</main>
-
-<?php require_once __DIR__ . '/includes/footer.php'; ?>
+<?php
+// ── Include Footer ───────────────────────────────────────────────────
+require_once __DIR__ . '/includes/footer.php';
+?>
