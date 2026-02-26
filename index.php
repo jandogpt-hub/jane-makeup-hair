@@ -12,9 +12,50 @@ require_once __DIR__ . '/includes/header.php';
 
     <!-- ===== HERO ===== -->
     <section class="hero-section">
-        <!-- Dynamic Background (Simplified CSS Marquee) -->
+        <!-- Dynamic Background (Pure CSS Marquee) -->
         <div class="hero-background"></div>
-        <div style="position:absolute; inset:0; opacity:0.3; background-image:url('https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?auto=format&fit=crop&q=80&w=1920'); background-size:cover; background-position:center; filter:grayscale(100%); mix-blend-mode:overlay; z-index:-1;"></div>
+        <div class="hero-gradient-overlay"></div>
+        
+        <div class="marquee-container">
+            <?php 
+                // Images from React prototype
+                $col1 = [
+                    "https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?auto=format&fit=crop&q=80&w=800",
+                    "https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?auto=format&fit=crop&q=80&w=800",
+                    "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=800",
+                    "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&q=80&w=800"
+                ];
+                $col2 = [
+                    "https://images.unsplash.com/photo-1620331311520-246422fd82f9?auto=format&fit=crop&q=80&w=800",
+                    "https://images.unsplash.com/photo-1596704017254-9b121068fb31?auto=format&fit=crop&q=80&w=800",
+                    "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&q=80&w=800",
+                    "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&q=80&w=800"
+                ];
+                $col3 = [
+                    "https://images.unsplash.com/photo-1512496011212-721d0b3272dd?auto=format&fit=crop&q=80&w=800",
+                    "https://images.unsplash.com/photo-1605763240004-7e93b172d754?auto=format&fit=crop&q=80&w=800",
+                    "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=800",
+                    "https://images.unsplash.com/photo-1519699047748-40baea26f85f?auto=format&fit=crop&q=80&w=800"
+                ];
+                
+                function renderMarquee($images, $duration, $reverse) {
+                    $class = $reverse ? 'marquee-track reverse' : 'marquee-track';
+                    $html = '<div class="marquee-col"><div class="'.$class.'" style="animation-duration: '.$duration.'s">';
+                    // Double array to create seamless loop
+                    $loop = array_merge($images, $images);
+                    $html .= '<div class="marquee-track-inner">';
+                    foreach($loop as $src) {
+                        $html .= '<img src="'.$src.'" loading="lazy" alt="">';
+                    }
+                    $html .= '</div></div></div>';
+                    echo $html;
+                }
+            ?>
+            
+            <?php renderMarquee($col1, 45, false); ?>
+            <?php renderMarquee($col2, 35, true); ?>
+            <?php renderMarquee($col3, 50, false); ?>
+        </div>
         
         <div class="container hero-content" style="z-index: 10;">
             <div class="hero-badge">
