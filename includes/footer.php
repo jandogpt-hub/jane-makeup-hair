@@ -33,7 +33,7 @@ if (!defined('allowed')) { header('Location: /'); exit; }
             </div>
             
             <div>
-                <h4 class="text-xs font-bold tracking-widest uppercase mb-8 text-white mt-2">Studio Locations</h4>
+                <h4 class="text-xs font-bold tracking-widest uppercase mb-8 text-white mt-2">Available In</h4>
                 <ul class="space-y-4 text-sm text-white/50 font-medium">
                     <?php if(!empty($areas)): foreach($areas as $a): ?>
                         <li><a class="hover:text-primary transition-colors" href="/area-served/<?php echo $a['slug']; ?>.php"><?php echo $a['name']; ?></a></li>

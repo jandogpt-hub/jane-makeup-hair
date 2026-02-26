@@ -152,7 +152,7 @@ include_once __DIR__ . '/config.php';
                 <!-- Areas Served Dropdown (From Config) -->
                 <div class="relative group">
                     <button class="flex items-center gap-1 hover:text-primary transition-colors focus:outline-none py-4">
-                        Studio
+                        Available In
                         <svg class="w-4 h-4 text-white/50 group-hover:text-primary transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                         </svg>
@@ -205,7 +205,7 @@ include_once __DIR__ . '/config.php';
              
              <!-- Mobile Areas -->
              <div class="flex flex-col gap-4 border-b border-white/5 pb-4 mt-2">
-                <span class="text-xs font-bold text-primary uppercase tracking-widest">Studio Locations</span>
+                <span class="text-xs font-bold text-primary uppercase tracking-widest">Available In</span>
                 <?php if(!empty($areas)): foreach($areas as $a): ?>
                 <a href="/area-served/<?php echo $a['slug']; ?>.php" class="text-lg text-white/70 pl-4 border-l border-white/10 hover:border-primary hover:text-white transition-all"><?php echo $a['name']; ?></a>
                 <?php endforeach; endif; ?>
