@@ -10,14 +10,15 @@
      * Toggles the mobile navigation open/closed.
      */
     function initMobileNav() {
-        const toggle  = document.querySelector('.nav-toggle');
-        const mobileNav = document.querySelector('.mobile-nav');
+        const toggle = document.querySelector('.mobile-menu-toggle');
+        const mobileNav = document.querySelector('.main-nav');
         if (!toggle || !mobileNav) return;
 
         toggle.addEventListener('click', function () {
-            const isOpen = !mobileNav.hidden;
-            mobileNav.hidden = isOpen;
-            toggle.setAttribute('aria-expanded', String(!isOpen));
+            document.body.classList.toggle('nav-open');
+            const isOpen = document.body.classList.contains('nav-open');
+            toggle.innerHTML = isOpen ? '✕' : '☰';
+            toggle.setAttribute('aria-expanded', String(isOpen));
         });
     }
 
