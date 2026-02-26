@@ -10,9 +10,8 @@ if (!defined('allowed')) { header('Location: /'); exit; }
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
             <div class="space-y-6">
                 <!-- Logo/Brand Area -->
-                <div class="flex items-center gap-2 mb-8">
-                    <span class="material-symbols-outlined text-primary text-3xl">flare</span>
-                    <h2 class="text-2xl font-bold tracking-tighter uppercase italic">Jane</h2>
+                <div class="flex items-center gap-2 mb-8 -ml-2">
+                    <img src="https://res.cloudinary.com/dkceuqcix/image/upload/v1772086055/new-jane-mobile-makeup-hair-logo-light_zjszqm.png" alt="Jane Makeup & Hair" class="h-16 md:h-20 w-auto brightness-0 invert object-contain scale-[1.5] origin-left" />
                 </div>
                 <p class="text-white/40 text-sm leading-relaxed max-w-xs">
                     Elite makeup and hair artistry for the red carpet and beyond. Sculpting the West Hollywood identity.
