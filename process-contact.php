@@ -81,10 +81,10 @@ $body    = implode("\n", [
     "Message:",
     $message,
     "",
-    "--- Sent from janemakeup.com at " . date('Y-m-d H:i:s T'),
+    "--- Sent from janemakeuphair.com at " . date('Y-m-d H:i:s T'),
 ]);
 $headers = implode("\r\n", [
-    "From: noreply@janemakeup.com",
+    "From: noreply@janemakeuphair.com",
     "Reply-To: {$email}",
     "Content-Type: text/plain; charset=UTF-8",
 ]);

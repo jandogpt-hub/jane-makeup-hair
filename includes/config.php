@@ -23,7 +23,7 @@ define('SITE_NAME',    'Jane Makeup & Hair');
 define('SITE_TAGLINE', 'Red Carpet Beauty, Anywhere You Are');
 define('SITE_PHONE',   '(323) 593-1246');
 define('SITE_EMAIL',   'makeupjaneusa@gmail.com');
-define('SITE_URL',     'https://www.janemakeup.com'); // update when domain is confirmed
+define('SITE_URL',     'https://janemakeuphair.com');
 
 // Business Info for LocalBusiness Schema
 define('BUSINESS_ADDRESS', '6028 Lindenhurst Ave, Los Angeles, CA 90036');
@@ -46,7 +46,7 @@ define('SOCIAL_YELP',      'https://www.yelp.com/biz/janemakeup-beverly-hills-4'
 // Used to auto-build nav dropdowns, footer links, and cross-linking sections.
 // =============================================
 $services = [
-    ['name' => 'Bridal Makeup & Hair',              'slug' => 'bridal-makeup-hair',            'icon' => '💍'],
+    ['name' => 'Mobile Bridal Makeup & Hair',       'slug' => 'bridal-makeup-hair',            'icon' => '💍'],
     ['name' => 'Special Event Makeup & Hair',       'slug' => 'special-event-makeup-hair',     'icon' => '🎭'],
     ['name' => 'Film, TV & Production Makeup',      'slug' => 'film-tv-production-makeup',     'icon' => '🎬'],
     ['name' => 'Photoshoot & Editorial Makeup',     'slug' => 'photoshoot-editorial-makeup',   'icon' => '📸'],

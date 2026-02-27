@@ -28,24 +28,41 @@ require_once __DIR__ . '/includes/header.php';
 $homepage_services = [
     [
         'type'  => 'image',
-        'title' => 'Mobile Bridal Makeup',
+        'title' => 'Mobile Bridal Makeup & Hair',
         'desc'  => 'Jane comes to your venue. Camera-ready bridal glam delivered on location.',
         'image' => 'https://res.cloudinary.com/dkceuqcix/image/upload/w_800,h_1000,c_fill,g_face,q_80,fl_keep_iptc/v1772166783/jane-mobile-makeup-hair-west-hollywood-002_zfmiqy.jpg',
-        'alt'   => 'Jane applying professional bridal makeup on location in West Hollywood'
+        'alt'   => 'Jane applying professional mobile bridal makeup on location in West Hollywood'
     ],
     [
         'type'  => 'image',
-        'title' => 'Hair Styling',
-        'desc'  => 'Sculpted waves, sleek finishes, and updos.',
+        'title' => 'Special Event Makeup & Hair',
+        'desc'  => 'Sculpted waves, sleek finishes, updos, and flawless occasion makeup.',
         'image' => 'https://lh3.googleusercontent.com/aida-public/AB6AXuCD030aZGzH22P7pESdF2OTwIZ3xk7WV9zuxeyGgolwQWdlFQK15codwglyJAqGISiC65DCkE8dP7duM230jhioaCkVVKZSjA4HfXFzTteECG0hKZKcaXtUOrhtyFT8xMHWuZDlH8SftdSZ_rpA3p6OpsXDwLwETegablRwAY7PG7Jxp3YdRtsUynJ1AlpFkDZRk-5G9LNzrK4GI9ndypqIvCp8nrLTTpf2Wk4R2EQi2X0Y-1awXZlGFSXQxfAcAOqHhKoTwtWDcl4N',
-        'alt'   => 'Professional hair styling session in studio'
+        'alt'   => 'Professional makeup and hair session for a special event'
     ],
     [
         'type'   => 'feature',
-        'title'  => 'VIP Concierge',
-        'desc'   => 'On-location services for private events, weddings, and high-profile bookings.',
-        'icon'   => 'diamond',
-        'button' => 'Inquire Now'
+        'title'  => 'Film, TV & Production Makeup',
+        'desc'   => 'High-definition, camera-ready styling specially designed for sets and productions.',
+        'icon'   => 'movie',
+        'button' => 'Learn More',
+        'url'    => '/services/film-tv-production-makeup'
+    ],
+    [
+        'type'   => 'feature',
+        'title'  => 'Photoshoot & Editorial Makeup',
+        'desc'   => 'Creative, striking, and flawless artistry tailored for professional photography.',
+        'icon'   => 'photo_camera',
+        'button' => 'Learn More',
+        'url'    => '/services/photoshoot-editorial-makeup'
+    ],
+    [
+        'type'   => 'feature',
+        'title'  => 'Airbrush Makeup',
+        'desc'   => 'Achieve a natural, weightless, and long-lasting finish built to handle any lighting.',
+        'icon'   => 'brush',
+        'button' => 'Learn More',
+        'url'    => '/services/airbrush-makeup'
     ]
 ];
 
@@ -298,7 +315,7 @@ $gallery_images = [
                 aria-label="Book your bridal makeup and hair trial session"
             >
                 <div class="flex flex-col gap-1 text-center sm:text-left">
-                    <p class="text-xs font-bold uppercase tracking-[0.4em] text-primary">Bridal Makeup &amp; Hair Solutions</p>
+                    <p class="text-xs font-bold uppercase tracking-[0.4em] text-primary">Mobile Bridal Makeup &amp; Hair Solutions</p>
                     <p class="text-2xl md:text-3xl font-black uppercase tracking-tight text-white">Ready to see your look?</p>
                 </div>
                 <a href="tel:3233100966"

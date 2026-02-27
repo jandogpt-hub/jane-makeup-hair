@@ -1,12 +1,12 @@
 <?php
 /**
- * Jane Makeup & Hair — Bridal Makeup & Hair
+ * Jane Makeup & Hair — Mobile Bridal Makeup & Hair
  * Pillar page: merges bridal makeup + bridal hair into one unified intent.
  * Targets: "bridal makeup and hair West Hollywood", "wedding makeup hair LA",
  *           "mobile bridal artist Los Angeles", "bridal trial makeup hair".
  */
 define('allowed', true);
-$pageTitle       = 'Bridal Makeup & Hair West Hollywood | Jane Makeup & Hair';
+$pageTitle       = 'Mobile Bridal Makeup & Hair West Hollywood | Jane Makeup & Hair';
 $pageDescription = 'Mobile bridal makeup and hair styling delivered to your venue, hotel, or home in West Hollywood & LA. Airbrush-ready looks that last 12+ hours. Trial sessions available. Book Jane today.';
 require_once __DIR__ . '/../includes/header.php';
 ?>
@@ -16,7 +16,7 @@ require_once __DIR__ . '/../includes/header.php';
     <!-- HERO -->
     <section class="section">
         <div class="container">
-            <h1>Bridal Makeup & Hair Artist in West Hollywood</h1>
+            <h1>Mobile Bridal Makeup & Hair Artist in West Hollywood</h1>
             <p class="section-sub">Jane arrives at your venue fully equipped — flawless bridal makeup and hair styling that photographs beautifully and lasts all day and night, without a single touch-up.</p>
             <a href="/contact.php" class="btn btn-primary">Book Your Bridal Trial</a>
         </div>
@@ -110,10 +110,10 @@ require_once __DIR__ . '/../includes/header.php';
     <!-- AREAS -->
     <section class="section">
         <div class="container">
-            <h2>Bridal Makeup & Hair Available In</h2>
+            <h2>Mobile Bridal Makeup & Hair Available In</h2>
             <ul class="areas-list">
                 <?php foreach ($areas as $a): ?>
-                <li><a href="/area-served/<?php echo $a['slug']; ?>.php">Bridal Makeup & Hair in <?php echo $a['name']; ?></a></li>
+                <li><a href="/area-served/<?php echo $a['slug']; ?>.php">Mobile Bridal Makeup & Hair in <?php echo $a['name']; ?></a></li>
                 <?php endforeach; ?>
             </ul>
         </div>
