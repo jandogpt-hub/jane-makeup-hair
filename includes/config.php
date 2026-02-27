@@ -46,13 +46,11 @@ define('SOCIAL_YELP',      'https://www.yelp.com/biz/janemakeup-beverly-hills-4'
 // Used to auto-build nav dropdowns, footer links, and cross-linking sections.
 // =============================================
 $services = [
-    ['name' => 'Bridal Makeup',     'slug' => 'bridal-makeup',     'icon' => '💍'],
-    ['name' => 'Bridal Hair',       'slug' => 'bridal-hair',       'icon' => '✨'],
-    ['name' => 'Event Makeup',      'slug' => 'event-makeup',      'icon' => '🎭'],
-    ['name' => 'Photoshoot Makeup', 'slug' => 'photoshoot-makeup', 'icon' => '📸'],
-    ['name' => 'Blowout & Styling', 'slug' => 'blowout-styling',   'icon' => '💨'],
-    ['name' => 'Updo Hairstyling',  'slug' => 'updo-hairstyling',  'icon' => '👑'],
-    ['name' => 'Airbrush Makeup',   'slug' => 'airbrush-makeup',   'icon' => '🎨'],
+    ['name' => 'Bridal Makeup & Hair',              'slug' => 'bridal-makeup-hair',            'icon' => '💍'],
+    ['name' => 'Special Event Makeup & Hair',       'slug' => 'special-event-makeup-hair',     'icon' => '🎭'],
+    ['name' => 'Film, TV & Production Makeup',      'slug' => 'film-tv-production-makeup',     'icon' => '🎬'],
+    ['name' => 'Photoshoot & Editorial Makeup',     'slug' => 'photoshoot-editorial-makeup',   'icon' => '📸'],
+    ['name' => 'Airbrush Makeup',                   'slug' => 'airbrush-makeup',               'icon' => '🎨'],
 ];
 
 // =============================================

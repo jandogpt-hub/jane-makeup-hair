@@ -209,11 +209,15 @@ include_once __DIR__ . '/config.php';
                 <a class="hover:text-primary transition-colors" href="/about.php">About</a>
             </div>
 
-            <!-- CTAs (Desktop) — click to call -->
+            <!-- CTAs (Desktop) — Book a Trial → contact page -->
             <div class="hidden lg:flex gap-4 items-center">
-                <a href="tel:3233100966" class="inline-flex items-center gap-2 bg-primary text-white hover:bg-primary-hover transition-all duration-300 px-6 py-2 rounded-full text-sm font-bold uppercase tracking-tighter shadow-lg">
-                    <span class="material-symbols-outlined" style="font-size:16px">phone_in_talk</span>
-                    (323) 310-0966
+                <a href="/contact.php"
+                   id="nav-book-trial-cta"
+                   class="inline-flex items-center gap-2 bg-primary text-white hover:bg-primary-hover transition-all duration-300 px-6 py-2.5 rounded-full text-sm font-bold uppercase tracking-tighter shadow-lg"
+                   style="box-shadow: 0 0 20px rgba(201,168,76,0.25);"
+                   aria-label="Book a bridal makeup and hair trial session">
+                    <span class="material-symbols-outlined" style="font-size:16px" aria-hidden="true">calendar_add_on</span>
+                    Book a Trial
                 </a>
             </div>
             
