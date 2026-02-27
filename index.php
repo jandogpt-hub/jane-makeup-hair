@@ -28,10 +28,10 @@ require_once __DIR__ . '/includes/header.php';
 $homepage_services = [
     [
         'type'  => 'image',
-        'title' => 'Makeup Artistry',
-        'desc'  => 'From red carpet glam to natural radiance.',
-        'image' => 'https://lh3.googleusercontent.com/aida-public/AB6AXuDvnLwKJR7rLyhDG32C6506etHyf8WMoAej3gJq1AwfeJcK4DwcO2sPmipgWS6o5lhJ3FI3gGlnY4h9VigwJjs6Tb80JaKwtQByanVD1u7N_rUxMs43H9FLh6y7Z4fLZKonQRT15HshQDBwvLx3yjQqM5iS1QA8X4WoZhSFnIpOeOTjbAgYqUZCAMZknsUpE2fLGAfj1jFfgo0DLQ8ST0U5XdEGw0G5lICWaXNg9rp4NdskAiWpLqUmX_oUa_qS0lc9WQYp2tFIPRu6',
-        'alt'   => 'Close up of editorial makeup artistry'
+        'title' => 'Mobile Bridal Makeup',
+        'desc'  => 'Jane comes to your venue. Camera-ready bridal glam delivered on location.',
+        'image' => 'https://res.cloudinary.com/dkceuqcix/image/upload/w_800,h_1000,c_fill,g_face,q_80,fl_keep_iptc/v1772166783/jane-mobile-makeup-hair-west-hollywood-002_zfmiqy.jpg',
+        'alt'   => 'Jane applying professional bridal makeup on location in West Hollywood'
     ],
     [
         'type'  => 'image',
@@ -62,24 +62,128 @@ $gallery_images = [
     <section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 z-0">
             <div class="absolute inset-0 bg-gradient-to-b from-transparent via-background-dark/20 to-background-dark z-10"></div>
-            <img class="w-full h-full object-cover scale-110 filter grayscale brightness-75" alt="Avant-garde editorial portrait with high fashion makeup" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJ6eneh4LnBKd7I9Rs4hPaBvOL0u_ZV7Q8aD9ET-8Gw07yZP8nQAjxXTQFcFwVC6GZ7NzKI3zO3_fuL_7sl4yF-aIxE8aOFdU8wtl5VcYo7QsvBTp38MQJL_mbkMgBqPrhFzVgQALAlA5N-kpqfCs3t-Qp9uhIgOYF-mOMxYDapIjH_hQhdP4vQRYWQDSDKB62YFLBrPOrn2ZX3LDJQ_QRTdBbq50OtVYgJn602AfRNFEYxfnogzonmnhCRcN8AFJx7cmk7r1naYF6"/>
+            <img class="w-full h-full object-cover object-top scale-110 filter grayscale brightness-75"
+                 alt="Jane — West Hollywood mobile makeup and hair artist"
+                 src="https://res.cloudinary.com/dkceuqcix/image/upload/w_2400,h_1600,c_fill,g_face,q_80,fl_keep_iptc/v1772164687/janes-makeup-hair-headshot_m3azif.jpg"
+                 width="2400"
+                 height="1600"
+                 fetchpriority="high"
+                 decoding="async"/>
         </div>
+
+        <!-- Semantic triplet: WHO + WHAT + WHERE -->
         <div class="relative z-20 text-center px-4">
-            <h1 class="text-[12vw] md:text-[18vw] font-bold leading-none uppercase tracking-tighter mb-[-2vw]">
-                <span class="block">Jane</span>
-                <span class="text-outline block mt-[-4vw]">Studio</span>
+
+            <!-- WHO -->
+            <h1 class="font-bold leading-none uppercase tracking-tighter">
+                <span class="block text-[12vw] md:text-[16vw]">Jane</span>
+
+                <!-- WHAT -->
+                <span class="block text-[5.5vw] md:text-[4.5vw] font-black tracking-tight text-white/90 mt-[-1vw] md:mt-[-1.5vw]">
+                    Mobile Bridal Makeup &amp; Hair Artist
+                </span>
             </h1>
-            <p class="text-sm md:text-xl uppercase tracking-[0.5em] font-light mt-8 md:mt-0 opacity-80">
-                Sculpting the West Hollywood Identity
-            </p>
+
+            <!-- WHERE -->
+            <div class="flex items-center justify-center gap-2 mt-4 md:mt-6">
+                <span class="material-symbols-outlined text-primary text-base" aria-hidden="true">location_on</span>
+                <p class="text-sm md:text-base uppercase tracking-[0.35em] font-semibold text-white/80">
+                    West Hollywood, CA
+                </p>
+            </div>
+
+            <!-- TRUST BADGE — 21st.dev style: staggered stars + count-up (vanilla JS, zero deps) -->
+            <div class="mt-8 md:mt-10 flex justify-center">
+                <div id="review-card"
+                     class="flex flex-col items-center rounded-2xl border border-white/10 px-8 py-6 text-center shadow-2xl shadow-black/60"
+                     style="background: rgba(255,255,255,0.05); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);"
+                     aria-label="Rated 4.9 to 5 stars across 52 reviews on Yelp and Google">
+
+                    <!-- Staggered stars -->
+                    <div class="flex items-center gap-1.5" role="img" aria-hidden="true">
+                        <span class="star-anim" style="--d:0.20s">★</span>
+                        <span class="star-anim" style="--d:0.32s">★</span>
+                        <span class="star-anim" style="--d:0.44s">★</span>
+                        <span class="star-anim" style="--d:0.56s">★</span>
+                        <span class="star-anim" style="--d:0.68s">★</span>
+                    </div>
+
+                    <!-- Count-up headline -->
+                    <h2 class="mt-4 text-4xl font-black tracking-tight text-white leading-none">
+                        <span id="avg-rating">0.0</span><span class="text-2xl font-semibold text-white/55"> (<span id="review-count">0</span> Reviews)</span>
+                    </h2>
+
+                    <!-- Platform attribution -->
+                    <p class="mt-3 text-[11px] text-white/40 uppercase tracking-widest">
+                        ★ 4.9 Yelp &nbsp;·&nbsp; ★ 5.0 Google &nbsp;·&nbsp; Los Angeles, CA
+                    </p>
+
+                </div>
+            </div>
+
+            <script>
+            /**
+             * Animates a DOM element's text from 0 to target using easeOut cubic curve.
+             * Mirrors framer-motion's animate() easeOut behaviour without any library.
+             *
+             * @param {HTMLElement} el       - Element whose textContent to update
+             * @param {number}      target   - Final value to count up to
+             * @param {number}      decimals - Decimal places (0 for integers)
+             * @param {number}      duration - Total animation duration in ms
+             */
+            function countUp(el, target, decimals, duration) {
+                const start = performance.now();
+                /**
+                 * requestAnimationFrame step function.
+                 * @param {number} now - Current timestamp from rAF
+                 */
+                function step(now) {
+                    const elapsed  = now - start;
+                    const progress = Math.min(elapsed / duration, 1);
+                    const eased    = 1 - Math.pow(1 - progress, 3); // cubic easeOut
+                    const current  = eased * target;
+                    el.textContent = decimals > 0
+                        ? current.toFixed(decimals)
+                        : new Intl.NumberFormat('en-US').format(Math.round(current));
+                    if (progress < 1) requestAnimationFrame(step);
+                }
+                requestAnimationFrame(step);
+            }
+
+            /**
+             * Triggers count-up animations when the review card scrolls into view.
+             * Uses IntersectionObserver so the animation only fires once.
+             */
+            (function initReviewCountUp() {
+                const card = document.getElementById('review-card');
+                if (!card) return;
+
+                const observer = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            countUp(document.getElementById('avg-rating'),   4.9, 1, 1500);
+                            countUp(document.getElementById('review-count'), 52,  0, 1500);
+                            observer.unobserve(card);
+                        }
+                    });
+                }, { threshold: 0.4 });
+
+                observer.observe(card);
+            })();
+            </script>
+
+
         </div>
+
+        <!-- Bottom-left editorial detail -->
         <div class="absolute bottom-10 left-10 z-20 hidden md:block">
             <div class="flex flex-col gap-4">
                 <div class="h-px w-24 bg-primary/50"></div>
-                <p class="text-[10px] uppercase tracking-widest opacity-60">Est. 2026 / LA</p>
+                <p class="text-[10px] uppercase tracking-widest opacity-60">Est. 2006 / West Hollywood</p>
             </div>
         </div>
     </section>
+
 
     <!-- ===== SERVICES GRID ===== -->
     <section class="px-6 py-20 bg-background-dark relative">
@@ -117,6 +221,61 @@ $gallery_images = [
                     </div>
                 <?php endif; ?>
             <?php endforeach; ?>
+        </div>
+    </section>
+
+    <!-- ===== AS SEEN IN ===== -->
+    <section class="relative py-14 bg-background-dark overflow-hidden">
+        <!-- top & bottom hairlines -->
+        <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+
+        <!-- label -->
+        <p class="text-center text-[10px] font-bold uppercase tracking-[0.4em] text-white/30 mb-8">As Seen In Production</p>
+
+        <!-- marquee track -->
+        <div class="relative">
+            <!-- left fade -->
+            <div class="absolute left-0 top-0 bottom-0 w-32 z-10 bg-gradient-to-r from-background-dark to-transparent pointer-events-none"></div>
+            <!-- right fade -->
+            <div class="absolute right-0 top-0 bottom-0 w-32 z-10 bg-gradient-to-l from-background-dark to-transparent pointer-events-none"></div>
+
+            <div class="flex overflow-hidden">
+                <!-- Two identical sets so the loop is seamless -->
+                <div class="flex items-center gap-20 animate-[marquee_28s_linear_infinite] whitespace-nowrap pr-20 flex-shrink-0">
+                    <span class="text-2xl md:text-3xl font-black uppercase tracking-tighter text-white/20 hover:text-white/50 transition-colors duration-500 cursor-default select-none">Vogue</span>
+                    <span class="text-white/10 text-lg select-none">✦</span>
+                    <span class="text-2xl md:text-3xl font-black uppercase tracking-tighter text-white/20 hover:text-white/50 transition-colors duration-500 cursor-default select-none">Netflix</span>
+                    <span class="text-white/10 text-lg select-none">✦</span>
+                    <span class="text-2xl md:text-3xl font-black uppercase tracking-tighter text-white/20 hover:text-white/50 transition-colors duration-500 cursor-default select-none">HBO</span>
+                    <span class="text-white/10 text-lg select-none">✦</span>
+                    <span class="text-2xl md:text-3xl font-black uppercase tracking-tighter text-white/20 hover:text-white/50 transition-colors duration-500 cursor-default select-none">Vanity Fair</span>
+                    <span class="text-white/10 text-lg select-none">✦</span>
+                    <span class="text-2xl md:text-3xl font-black uppercase tracking-tighter text-white/20 hover:text-white/50 transition-colors duration-500 cursor-default select-none">Warner Bros.</span>
+                    <span class="text-white/10 text-lg select-none">✦</span>
+                    <span class="text-2xl md:text-3xl font-black uppercase tracking-tighter text-white/20 hover:text-white/50 transition-colors duration-500 cursor-default select-none">Allure</span>
+                    <span class="text-white/10 text-lg select-none">✦</span>
+                    <span class="text-2xl md:text-3xl font-black uppercase tracking-tighter text-white/20 hover:text-white/50 transition-colors duration-500 cursor-default select-none">ABC Studios</span>
+                    <span class="text-white/10 text-lg select-none">✦</span>
+                </div>
+                <!-- duplicate for seamless loop -->
+                <div class="flex items-center gap-20 animate-[marquee_28s_linear_infinite] whitespace-nowrap pr-20 flex-shrink-0" aria-hidden="true">
+                    <span class="text-2xl md:text-3xl font-black uppercase tracking-tighter text-white/20 hover:text-white/50 transition-colors duration-500 cursor-default select-none">Vogue</span>
+                    <span class="text-white/10 text-lg select-none">✦</span>
+                    <span class="text-2xl md:text-3xl font-black uppercase tracking-tighter text-white/20 hover:text-white/50 transition-colors duration-500 cursor-default select-none">Netflix</span>
+                    <span class="text-white/10 text-lg select-none">✦</span>
+                    <span class="text-2xl md:text-3xl font-black uppercase tracking-tighter text-white/20 hover:text-white/50 transition-colors duration-500 cursor-default select-none">HBO</span>
+                    <span class="text-white/10 text-lg select-none">✦</span>
+                    <span class="text-2xl md:text-3xl font-black uppercase tracking-tighter text-white/20 hover:text-white/50 transition-colors duration-500 cursor-default select-none">Vanity Fair</span>
+                    <span class="text-white/10 text-lg select-none">✦</span>
+                    <span class="text-2xl md:text-3xl font-black uppercase tracking-tighter text-white/20 hover:text-white/50 transition-colors duration-500 cursor-default select-none">Warner Bros.</span>
+                    <span class="text-white/10 text-lg select-none">✦</span>
+                    <span class="text-2xl md:text-3xl font-black uppercase tracking-tighter text-white/20 hover:text-white/50 transition-colors duration-500 cursor-default select-none">Allure</span>
+                    <span class="text-white/10 text-lg select-none">✦</span>
+                    <span class="text-2xl md:text-3xl font-black uppercase tracking-tighter text-white/20 hover:text-white/50 transition-colors duration-500 cursor-default select-none">ABC Studios</span>
+                    <span class="text-white/10 text-lg select-none">✦</span>
+                </div>
+            </div>
         </div>
     </section>
 

@@ -33,11 +33,12 @@ include_once __DIR__ . '/config.php';
             theme: {
                 extend: {
                     colors: {
-                        "primary": "#f45925",
+                        "primary": "#C9A84C",
+                        "primary-hover": "#E2BF6A",
                         "background-light": "#f8f6f5",
-                        "background-dark": "#221410",
-                        "champagne": "#d4af37",
-                        "brand-dark": "#0A0A0A"
+                        "background-dark": "#0A0A0A",
+                        "champagne": "#C9A84C",
+                        "brand-dark": "#080808"
                     },
                     fontFamily: {
                         "display": ["Space Grotesk", "sans-serif"]
@@ -48,6 +49,15 @@ include_once __DIR__ . '/config.php';
                         "xl": "1.5rem",
                         "full": "9999px"
                     },
+                    keyframes: {
+                        marquee: {
+                            "0%":   { transform: "translateX(0%)" },
+                            "100%": { transform: "translateX(-100%)" }
+                        }
+                    },
+                    animation: {
+                        marquee: "marquee 28s linear infinite"
+                    }
                 },
             },
         }
@@ -62,21 +72,21 @@ include_once __DIR__ . '/config.php';
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
         .glass-morphism {
-            background: rgba(34, 20, 16, 0.7);
+            background: rgba(8, 8, 8, 0.88);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(201, 168, 76, 0.12);
         }
         .liquid-gradient {
-            background: linear-gradient(135deg, #221410 0%, #3d1c14 50%, #f45925 150%);
+            background: linear-gradient(135deg, #0A0A0A 0%, #1a1408 50%, #C9A84C 150%);
         }
         body { min-height: max(884px, 100dvh); }
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
         .glass-card {
-            background: rgba(34, 20, 16, 0.6);
+            background: rgba(10, 10, 10, 0.7);
             backdrop-filter: blur(12px);
-            border: 1px solid rgba(244, 89, 37, 0.1);
+            border: 1px solid rgba(201, 168, 76, 0.15);
         }
         .text-outline {
             -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
@@ -99,8 +109,32 @@ include_once __DIR__ . '/config.php';
             background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuDKHziKZgpu6jKZa9PjZPy1YBIuUs88grrLMS-LwDS5OWI2F4cEJHk68Mk-fOduy5MX1K_O3ZBWJP-yD1T1o125O48uSAq_AZlBKlcmGtikfG__VrmIuR1h5OGWzMz82xZuwxo1LNroxBxUiNt4kRuvKhgEhcEXKem7lTMzXogvsg6eI2I8aFrYSLZluqEQXxkOen5vIyeD6bGsfZE7Aybzfvk2yk3zDSYPozKjzHwhYGH2-KJXIrvGIOYzXzeVI1ioiFMyWfBx_Pi4);
         }
         ::-webkit-scrollbar { width: 5px; }
-        ::-webkit-scrollbar-track { background: #221410; }
-        ::-webkit-scrollbar-thumb { background: #f45925; border-radius: 10px; }
+        ::-webkit-scrollbar-track { background: #0A0A0A; }
+        ::-webkit-scrollbar-thumb { background: #C9A84C; border-radius: 10px; }
+
+        /* ── Review card animations (mirrors 21st.dev stagger + count-up pattern) ── */
+        @keyframes starPop {
+            0%   { opacity: 0; transform: scale(0.3) rotate(-20deg); }
+            70%  { transform: scale(1.25) rotate(4deg); }
+            100% { opacity: 1; transform: scale(1) rotate(0deg); }
+        }
+        .star-anim {
+            display: inline-block;
+            opacity: 0;
+            animation: starPop 0.4s ease-out forwards;
+            animation-delay: var(--d, 0s);
+            color: #FFD700;
+            font-size: 1.6rem;
+            line-height: 1;
+        }
+        @keyframes cardFadeUp {
+            from { opacity: 0; transform: translateY(18px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        #review-card {
+            opacity: 0;
+            animation: cardFadeUp 0.5s ease-out 0.1s forwards;
+        }
     </style>
 </head>
 <body class="bg-background-dark font-display text-white selection:bg-primary selection:text-white overflow-x-hidden">
@@ -117,11 +151,12 @@ include_once __DIR__ . '/config.php';
                 </a>
             </div>
 
-            <!-- Mobile: Center CTA -->
+            <!-- Mobile: Center CTA — click to call -->
             <div class="lg:hidden flex-1 flex justify-center">
-                 <a href="/contact.php" class="flex items-center bg-primary px-6 py-2 rounded-full shadow-lg hover:bg-white hover:text-primary transition-all duration-500">
-                    <span class="text-xs font-bold uppercase tracking-widest text-white hover:text-primary">Book</span>
-                 </a>
+                <a href="tel:3233100966" class="flex items-center gap-1.5 bg-primary px-5 py-2 rounded-full shadow-lg hover:bg-primary-hover transition-all duration-300">
+                    <span class="material-symbols-outlined text-white text-sm" style="font-size:16px">phone_in_talk</span>
+                    <span class="text-xs font-bold uppercase tracking-widest text-white">Call Now</span>
+                </a>
             </div>
 
             <!-- Desktop Menu -->
@@ -137,12 +172,12 @@ include_once __DIR__ . '/config.php';
                         </svg>
                     </button>
                     <!-- Dropdown Menu -->
-                    <div class="absolute top-full left-0 mt-0 w-64 bg-[#110A08] border border-white/10 rounded-sm shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-left z-50">
-                        <div class="py-2 flex flex-col">
+                    <div class="absolute top-full left-0 mt-1 w-64 bg-[#111111]/95 backdrop-blur-xl border border-white/15 border-t-2 border-t-[#C9A84C] rounded-sm shadow-2xl shadow-black/80 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-left z-50">
+                        <div class="py-1 flex flex-col">
                             <?php if(!empty($services)): foreach($services as $s): ?>
-                            <a href="/services/<?php echo $s['slug']; ?>.php" class="px-5 py-3 hover:bg-white/5 hover:text-primary text-white/90 transition-colors border-b border-white/5 flex items-center justify-between group/item">
+                            <a href="/services/<?php echo $s['slug']; ?>.php" class="px-5 py-3.5 hover:bg-[#C9A84C]/10 hover:text-[#C9A84C] text-white transition-colors border-b border-white/8 flex items-center justify-between group/item font-medium tracking-wide text-sm">
                                 <?php echo $s['name']; ?>
-                                <span class="text-primary opacity-0 group-hover/item:opacity-100 transition-opacity">→</span>
+                                <span class="text-[#C9A84C] opacity-0 group-hover/item:opacity-100 transition-opacity">→</span>
                             </a>
                             <?php endforeach; endif; ?>
                         </div>
@@ -158,12 +193,12 @@ include_once __DIR__ . '/config.php';
                         </svg>
                     </button>
                     <!-- Dropdown Menu -->
-                    <div class="absolute top-full left-0 mt-0 w-56 bg-[#110A08] border border-white/10 rounded-sm shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-left z-50 max-h-[60vh] overflow-y-auto">
-                        <div class="py-2 flex flex-col">
+                    <div class="absolute top-full left-0 mt-1 w-56 bg-[#111111]/95 backdrop-blur-xl border border-white/15 border-t-2 border-t-[#C9A84C] rounded-sm shadow-2xl shadow-black/80 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-left z-50 max-h-[60vh] overflow-y-auto">
+                        <div class="py-1 flex flex-col">
                             <?php if(!empty($areas)): foreach($areas as $a): ?>
-                            <a href="/area-served/<?php echo $a['slug']; ?>.php" class="px-5 py-3 hover:bg-white/5 hover:text-primary text-white/90 transition-colors border-b border-white/5 flex items-center justify-between group/item">
+                            <a href="/area-served/<?php echo $a['slug']; ?>.php" class="px-5 py-3.5 hover:bg-[#C9A84C]/10 hover:text-[#C9A84C] text-white transition-colors border-b border-white/8 flex items-center justify-between group/item font-medium tracking-wide text-sm">
                                 <?php echo $a['name']; ?>
-                                <span class="text-primary opacity-0 group-hover/item:opacity-100 transition-opacity">→</span>
+                                <span class="text-[#C9A84C] opacity-0 group-hover/item:opacity-100 transition-opacity">→</span>
                             </a>
                             <?php endforeach; endif; ?>
                         </div>
@@ -174,10 +209,11 @@ include_once __DIR__ . '/config.php';
                 <a class="hover:text-primary transition-colors" href="/about.php">About</a>
             </div>
 
-            <!-- CTAs (Desktop) -->
+            <!-- CTAs (Desktop) — click to call -->
             <div class="hidden lg:flex gap-4 items-center">
-                <a href="/contact.php" class="bg-primary text-white hover:bg-white hover:text-primary transition-all duration-500 px-6 py-2 rounded-full text-sm font-bold uppercase tracking-tighter shadow-lg">
-                    Book Session
+                <a href="tel:3233100966" class="inline-flex items-center gap-2 bg-primary text-white hover:bg-primary-hover transition-all duration-300 px-6 py-2 rounded-full text-sm font-bold uppercase tracking-tighter shadow-lg">
+                    <span class="material-symbols-outlined" style="font-size:16px">phone_in_talk</span>
+                    (323) 310-0966
                 </a>
             </div>
             
