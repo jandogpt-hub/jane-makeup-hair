@@ -185,6 +185,173 @@ $gallery_images = [
     </section>
 
 
+    <!-- ===== WHY CHOOSE US ===== -->
+    <section id="why-jane" class="relative py-28 px-6 bg-background-dark overflow-hidden">
+
+        <!-- Decorative background grid texture -->
+        <div class="absolute inset-0 opacity-[0.03]"
+             style="background-image: linear-gradient(rgba(201,168,76,0.8) 1px, transparent 1px), linear-gradient(90deg, rgba(201,168,76,0.8) 1px, transparent 1px); background-size: 60px 60px;"
+             aria-hidden="true"></div>
+
+        <!-- Top hairline -->
+        <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" aria-hidden="true"></div>
+
+        <!-- Section header -->
+        <header class="relative z-10 text-center mb-20">
+            <p class="text-xs font-bold uppercase tracking-[0.45em] text-primary mb-4">West Hollywood's Choice</p>
+            <h2 class="text-4xl md:text-6xl font-black uppercase tracking-tighter leading-none mb-6">
+                Why Choose<br>
+                <span class="text-primary">Jane Makeup &amp; Hair</span>
+            </h2>
+            <p class="max-w-xl mx-auto text-white/55 text-base leading-relaxed">
+                Preferred by brides and special event clients who need artistry that photographs beautifully
+                and withstands hours of celebration.
+            </p>
+        </header>
+
+        <!-- Feature cards grid -->
+        <div class="relative z-10 max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+            <?php
+            /**
+             * Why Choose Us feature card data.
+             * Each card has: icon (Material Symbol name), title, tagline, and body copy.
+             *
+             * @var array[] $why_cards
+             */
+            $why_cards = [
+                [
+                    'icon'    => 'favorite',
+                    'title'   => 'Bridal Expertise',
+                    'tagline' => 'Your look lasts from vows to last dance',
+                    'body'    => 'Your wedding day look stays perfect through tears, hugs, and every moment of dancing.',
+                ],
+                [
+                    'icon'    => 'directions_car',
+                    'title'   => 'On-Location Service',
+                    'tagline' => 'We come to you — venue, hotel, or home',
+                    'body'    => 'Stay relaxed and on schedule. Jane arrives wherever you are, fully set up and ready.',
+                ],
+                [
+                    'icon'    => 'auto_fix_high',
+                    'title'   => 'Airbrush Specialization',
+                    'tagline' => 'Natural in person. Flawless in photos.',
+                    'body'    => 'High-definition airbrush makeup built for cameras and the moments that matter most.',
+                ],
+                [
+                    'icon'    => 'event_available',
+                    'title'   => 'Trial Sessions Included',
+                    'tagline' => 'Test your complete look — no surprises',
+                    'body'    => 'Walk into your event with full confidence. Every detail refined, every concern answered.',
+                ],
+                [
+                    'icon'    => 'groups',
+                    'title'   => 'Group Coordination',
+                    'tagline' => 'Your whole bridal party, handled',
+                    'body'    => 'Precision timing for your entire party so no one is waiting and everyone looks stunning.',
+                ],
+            ];
+            ?>
+
+            <?php foreach ($why_cards as $idx => $card): ?>
+                <!--
+                    Card <?= $idx + 1 ?>: <?= htmlspecialchars($card['title']) ?>
+                    Animates in with staggered delay via inline CSS custom property.
+                -->
+                <article
+                    class="why-card group relative rounded-2xl p-8 flex flex-col gap-5 border border-white/8 overflow-hidden cursor-default"
+                    style="
+                        background: rgba(255,255,255,0.03);
+                        backdrop-filter: blur(12px);
+                        -webkit-backdrop-filter: blur(12px);
+                        --stagger: <?= $idx * 80 ?>ms;
+                    "
+                    aria-label="<?= htmlspecialchars($card['title']) ?>: <?= htmlspecialchars($card['tagline']) ?>"
+                >
+                    <!-- Gold hover glow (hidden, revealed on hover) -->
+                    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-2xl"
+                         style="background: radial-gradient(circle at 30% 40%, rgba(201,168,76,0.10) 0%, transparent 70%);"
+                         aria-hidden="true"></div>
+
+                    <!-- Gold accent bar -->
+                    <div class="h-px w-10 bg-primary/60 group-hover:w-full transition-all duration-500 ease-out" aria-hidden="true"></div>
+
+                    <!-- Icon -->
+                    <div class="w-12 h-12 rounded-xl flex items-center justify-center border border-primary/25 bg-primary/10 group-hover:bg-primary/20 transition-colors duration-300"
+                         aria-hidden="true">
+                        <span class="material-symbols-outlined text-primary text-2xl"><?= $card['icon'] ?></span>
+                    </div>
+
+                    <!-- Text -->
+                    <div class="flex flex-col gap-2">
+                        <h3 class="text-lg font-black uppercase tracking-tight text-white"><?= htmlspecialchars($card['title']) ?></h3>
+                        <p class="text-xs font-bold uppercase tracking-widest text-primary/80"><?= htmlspecialchars($card['tagline']) ?></p>
+                        <p class="text-sm text-white/55 leading-relaxed mt-1"><?= htmlspecialchars($card['body']) ?></p>
+                    </div>
+                </article>
+            <?php endforeach; ?>
+
+            <!-- CTA card — spans full width on the last row -->
+            <article
+                class="group relative rounded-2xl p-8 flex flex-col sm:flex-row items-center justify-between gap-6 border border-primary/30 overflow-hidden sm:col-span-2 lg:col-span-3"
+                style="background: linear-gradient(135deg, rgba(201,168,76,0.12) 0%, rgba(201,168,76,0.04) 100%);"
+                aria-label="Book your bridal makeup and hair trial session"
+            >
+                <div class="flex flex-col gap-1 text-center sm:text-left">
+                    <p class="text-xs font-bold uppercase tracking-[0.4em] text-primary">Bridal Makeup &amp; Hair Solutions</p>
+                    <p class="text-2xl md:text-3xl font-black uppercase tracking-tight text-white">Ready to see your look?</p>
+                </div>
+                <a href="tel:3233100966"
+                   id="why-jane-book-cta"
+                   class="flex-shrink-0 px-8 py-4 rounded-full bg-primary text-background-dark font-black text-sm uppercase tracking-widest hover:bg-primary-hover transition-colors duration-300 shadow-lg"
+                   style="box-shadow: 0 0 30px rgba(201,168,76,0.35);"
+                   aria-label="Call Jane to book your bridal trial — 323-310-0966">
+                    Book a Trial — 323-310-0966
+                </a>
+            </article>
+
+        </div>
+
+        <!-- Bottom hairline -->
+        <div class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" aria-hidden="true"></div>
+    </section>
+
+    <!-- Scroll-in animation for why-cards -->
+    <style>
+        .why-card {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.6s ease var(--stagger), transform 0.6s ease var(--stagger);
+        }
+        .why-card.why-card--visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+    <script>
+        /**
+         * Observes each .why-card element and adds the .why-card--visible
+         * class when it enters the viewport, triggering the CSS entry animation.
+         * Uses IntersectionObserver with a staggered delay via CSS custom property.
+         */
+        (function initWhyCards() {
+            const cards = document.querySelectorAll('.why-card');
+            if (!cards.length) return;
+
+            const observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('why-card--visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15 });
+
+            cards.forEach(function (card) { observer.observe(card); });
+        })();
+    </script>
+
+
     <!-- ===== SERVICES GRID ===== -->
     <section class="px-6 py-20 bg-background-dark relative">
         <div class="flex items-end justify-between mb-12">
