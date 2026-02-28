@@ -461,7 +461,125 @@ $gallery_images = [
                 </div>
             </div>
         </div>
+
+        <!-- ── Production Reel Video ─────────────────────────────────────── -->
+        <div class="relative z-10 max-w-6xl mx-auto mt-14 px-6">
+
+            <!-- Section micro-label -->
+            <p class="text-center text-[10px] font-bold uppercase tracking-[0.4em] text-white/25 mb-8">
+                Featured Production Reel
+            </p>
+
+            <!-- ── DESKTOP: 16:9 Landscape embed (hidden on mobile) ──────── -->
+            <div id="reel-desktop"
+                 class="hidden md:block relative w-full rounded-2xl overflow-hidden border border-white/8 reel-fade"
+                 style="aspect-ratio:16/9; box-shadow: 0 0 60px rgba(201,168,76,0.12), 0 20px 60px rgba(0,0,0,0.6);">
+
+                <!-- Gold top-edge glow -->
+                <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/60 to-transparent z-10" aria-hidden="true"></div>
+
+                <!-- Source: https://www.youtube.com/watch?v=AUgiE8XKthw -->
+                <iframe
+                    id="yt-reel-desktop"
+                    class="absolute inset-0 w-full h-full"
+                    src="https://www.youtube-nocookie.com/embed/AUgiE8XKthw?rel=0&modestbranding=1&color=white&iv_load_policy=3&playsinline=1"
+                    title="Jane Makeup &amp; Hair — Featured Production Reel"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                    loading="lazy"
+                    frameborder="0">
+                </iframe>
+            </div>
+
+            <!-- ── MOBILE: 9:16 Portrait / TikTok-Short style (visible only on mobile) ── -->
+            <div id="reel-mobile"
+                 class="block md:hidden relative mx-auto reel-fade"
+                 style="width: min(340px, 90vw);">
+
+                <!-- Portrait frame wrapper -->
+                <div class="relative rounded-[28px] overflow-hidden border border-white/10"
+                     style="aspect-ratio:9/16;
+                            box-shadow: 0 0 50px rgba(201,168,76,0.14), 0 20px 60px rgba(0,0,0,0.7);">
+
+                    <!-- Gold ring accent (top + bottom) -->
+                    <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/60 to-transparent z-10" aria-hidden="true"></div>
+                    <div class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent z-10" aria-hidden="true"></div>
+
+                    <!--
+                        Source: https://www.youtube.com/shorts/AUgiE8XKthw?feature=share
+                        YouTube converts /shorts/ID to /embed/ID — signals Short-format to the player.
+                        The iframe is oversized and center-cropped via translate to fill the 9:16 frame.
+                    -->
+                    <iframe
+                        id="yt-reel-mobile"
+                        class="absolute"
+                        src="https://www.youtube-nocookie.com/embed/AUgiE8XKthw?rel=0&modestbranding=1&color=white&iv_load_policy=3&playsinline=1"
+                        title="Jane Makeup &amp; Hair — Production Reel Short (mobile)"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                        loading="lazy"
+                        frameborder="0"
+                        style="
+                            /* Oversized 16:9 iframe, center-cropped to 9:16 portrait frame */
+                            width: calc(9 / 16 * 177.78%);
+                            height: 177.78%;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                        ">
+                    </iframe>
+
+                    <!-- Subtle vignette overlay (edges only) -->
+                    <div class="absolute inset-0 pointer-events-none z-10"
+                         style="background: radial-gradient(ellipse at center, transparent 55%, rgba(0,0,0,0.55) 100%);"
+                         aria-hidden="true"></div>
+                </div>
+
+                <!-- "Short" style pill badge -->
+                <div class="absolute top-4 right-[-10px] z-20 flex items-center gap-1.5 rounded-full px-3 py-1 text-[9px] font-black uppercase tracking-widest text-background-dark"
+                     style="background: linear-gradient(135deg, #C9A84C, #e8c96a);">
+                    <span class="material-symbols-outlined text-[12px]">play_circle</span>
+                    Production Reel
+                </div>
+            </div>
+
+        </div><!-- /production reel -->
+
     </section>
+
+    <!-- Reel fade-in animation -->
+    <style>
+        .reel-fade {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+        .reel-fade.reel-fade--visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+    <script>
+        /**
+         * Fades the production reel block into view when it enters the viewport.
+         * Uses IntersectionObserver for a single, non-repeating trigger.
+         */
+        (function initReelFade() {
+            var reels = document.querySelectorAll('.reel-fade');
+            if (!reels.length) return;
+
+            var observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('reel-fade--visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            reels.forEach(function (el) { observer.observe(el); });
+        })();
+    </script>
 
     <!-- ===== GALLERY ===== -->
     <section class="py-20 px-6 overflow-hidden bg-background-dark/50">

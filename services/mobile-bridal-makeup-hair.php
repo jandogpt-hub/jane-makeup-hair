@@ -125,7 +125,7 @@ require_once __DIR__ . '/../includes/header.php';
             <h2>Also Consider</h2>
             <ul class="areas-list">
                 <?php foreach ($services as $s): ?>
-                <?php if ($s['slug'] !== 'bridal-makeup-hair'): ?>
+                <?php if ($s['slug'] !== 'mobile-bridal-makeup-hair'): ?>
                 <li><a href="/services/<?php echo $s['slug']; ?>.php"><?php echo $s['name']; ?></a></li>
                 <?php endif; ?>
                 <?php endforeach; ?>
