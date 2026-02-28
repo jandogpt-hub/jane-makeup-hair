@@ -631,10 +631,10 @@ $gallery_images = [
             position: absolute;
             inset: 0;
             border-radius: 16px;
-            border: 1px solid rgba(255,255,255,0.08);
-            background: rgba(255,255,255,0.03);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255,255,255,0.12);
+            background: rgba(10, 10, 10, 0.85); /* Darker background for better contrast */
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
             padding: 28px;
             display: flex;
             flex-direction: column;
@@ -647,13 +647,13 @@ $gallery_images = [
                         box-shadow 0.4s ease;
             will-change: transform, opacity;
             transform-origin: bottom center;
-            box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+            box-shadow: 0 8px 40px rgba(0,0,0,0.8);
         }
 
         /* front card special styling */
         .rv-card[data-pos="0"] {
-            border-color: rgba(201,168,76,0.25);
-            box-shadow: 0 0 40px rgba(201,168,76,0.08), 0 16px 50px rgba(0,0,0,0.55);
+            border-color: rgba(201,168,76,0.35);
+            box-shadow: 0 0 40px rgba(201,168,76,0.1), 0 16px 50px rgba(0,0,0,0.7);
         }
 
         /* ── Border beam shimmer on front card ──────────────── */
@@ -690,22 +690,17 @@ $gallery_images = [
         .rv-star--on  { color: #C9A84C; fill: #C9A84C; }
         .rv-star--off { color: rgba(255,255,255,0.15); fill: rgba(255,255,255,0.15); }
 
-        /* ── Avatar ─────────────────────────────────────────── */
+        /* ── Avatar (Directory Logos) ───────────────────────── */
         .rv-avatar {
-            width: 42px; height: 42px;
-            border-radius: 50%;
+            width: 36px; height: 36px;
+            border-radius: 4px; /* Slight rounding for square logos */
             overflow: hidden;
-            border: 2px solid rgba(201,168,76,0.35);
             flex-shrink: 0;
-            background: rgba(201,168,76,0.15);
             display: flex; align-items: center; justify-content: center;
-            font-weight: 900;
-            font-size: 15px;
-            color: #C9A84C;
         }
         .rv-avatar img {
             width: 100%; height: 100%;
-            object-fit: cover;
+            object-fit: contain; /* Don't crop the directory logos */
             display: block;
         }
 
@@ -717,8 +712,8 @@ $gallery_images = [
             text-transform: uppercase;
             padding: 3px 8px;
             border-radius: 100px;
-            border: 1px solid rgba(255,255,255,0.10);
-            color: rgba(255,255,255,0.45);
+            border: 1px solid rgba(255,255,255,0.15);
+            color: rgba(255,255,255,0.65);
         }
 
         /* ── Click ripple on card ───────────────────────────── */
@@ -740,40 +735,40 @@ $gallery_images = [
         var REVIEWS = [
             {
                 name:     'Cameron K.',
-                initials: 'CK',
-                avatar:   'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=faces',
+                initials: '',
+                avatar:   'https://res.cloudinary.com/jane-makeup-hair/image/upload/v1772253018/yelp_icon_logo_blue_check_mark_jdnhzz.png',
                 platform: 'Yelp ★ 5.0',
                 rating:   5,
                 text:     'Jane came to our hotel the morning of my wedding and everything was absolutely flawless. My entire bridal party looked stunning. Calm, professional, and incredibly talented — she made the whole morning feel effortless.'
             },
             {
                 name:     'Sofia R.',
-                initials: 'SR',
-                avatar:   'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=faces',
+                initials: '',
+                avatar:   'https://res.cloudinary.com/jane-makeup-hair/image/upload/v1772253038/google_icon_logo_kfmrzi.png',
                 platform: 'Google ★ 5.0',
                 rating:   5,
                 text:     'My airbrush makeup lasted the entire night — through tears, dancing, and everything in between. Jane is an artist. She listened to exactly what I wanted and delivered beyond my expectations.'
             },
             {
                 name:     'Priya M.',
-                initials: 'PM',
-                avatar:   'https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=100&h=100&fit=crop&crop=faces',
+                initials: '',
+                avatar:   'https://res.cloudinary.com/jane-makeup-hair/image/upload/v1772253018/yelp_icon_logo_blue_check_mark_jdnhzz.png',
                 platform: 'Yelp ★ 5.0',
                 rating:   5,
                 text:     'I hired Jane for an editorial shoot in Los Angeles and the results spoke for themselves. Every look was precise, photogenic, and held up perfectly under studio lighting. Will absolutely book again.'
             },
             {
                 name:     'Alexa T.',
-                initials: 'AT',
-                avatar:   'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=100&h=100&fit=crop&crop=faces',
+                initials: '',
+                avatar:   'https://res.cloudinary.com/jane-makeup-hair/image/upload/v1772253038/google_icon_logo_kfmrzi.png',
                 platform: 'Google ★ 5.0',
                 rating:   5,
                 text:     'Jane did my makeup for a red carpet event and I have never felt more confident in my life. She traveled to my home in Beverly Hills and set up like a true professional. Worth every penny.'
             },
             {
                 name:     'Marcus D.',
-                initials: 'MD',
-                avatar:   'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=faces',
+                initials: '',
+                avatar:   'https://res.cloudinary.com/jane-makeup-hair/image/upload/v1772253018/yelp_icon_logo_blue_check_mark_jdnhzz.png',
                 platform: 'Yelp ★ 5.0',
                 rating:   5,
                 text:     'Our entire film production crew is so grateful we found Jane. She handled on-set makeup for a 12-hour shoot without missing a beat. Continuity was perfect. She is a true industry professional.'
