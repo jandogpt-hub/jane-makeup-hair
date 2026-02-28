@@ -147,7 +147,7 @@ include_once __DIR__ . '/config.php';
             <!-- Logo -->
             <div class="flex-shrink-0 flex items-center gap-2 relative z-50">
                 <a href="/" class="flex items-center gap-2">
-                    <img src="https://res.cloudinary.com/dkceuqcix/image/upload/v1772086055/new-jane-mobile-makeup-hair-logo-light_zjszqm.png" alt="Jane Makeup & Hair" class="h-12 md:h-16 w-auto brightness-0 invert object-contain scale-[1.5] origin-left" />
+                    <img src="https://res.cloudinary.com/jane-makeup-hair/image/upload/v1772086055/new-jane-mobile-makeup-hair-logo-light_zjszqm.png" alt="Jane Makeup & Hair" class="h-12 md:h-16 w-auto brightness-0 invert object-contain scale-[1.5] origin-left" />
                 </a>
             </div>
 

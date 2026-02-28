@@ -51,6 +51,7 @@ $services = [
     ['name' => 'Film, TV & Production Makeup',      'slug' => 'film-tv-production-makeup',     'icon' => '🎬'],
     ['name' => 'Photoshoot & Editorial Makeup',     'slug' => 'photoshoot-editorial-makeup',   'icon' => '📸'],
     ['name' => 'Airbrush Makeup',                   'slug' => 'airbrush-makeup',               'icon' => '🎨'],
+    ['name' => 'Special Effects & Halloween Makeup','slug' => 'special-effects-halloween',     'icon' => '🎃'],
 ];
 
 // =============================================

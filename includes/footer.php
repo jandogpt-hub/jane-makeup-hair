@@ -11,7 +11,7 @@ if (!defined('allowed')) { header('Location: /'); exit; }
             <div class="space-y-6">
                 <!-- Logo/Brand Area -->
                 <div class="flex items-center gap-2 mb-8 -ml-2">
-                    <img src="https://res.cloudinary.com/dkceuqcix/image/upload/v1772086055/new-jane-mobile-makeup-hair-logo-light_zjszqm.png" alt="Jane Makeup & Hair" class="h-16 md:h-20 w-auto brightness-0 invert object-contain scale-[1.5] origin-left" />
+                    <img src="https://res.cloudinary.com/jane-makeup-hair/image/upload/v1772086055/new-jane-mobile-makeup-hair-logo-light_zjszqm.png" alt="Jane Makeup & Hair" class="h-16 md:h-20 w-auto brightness-0 invert object-contain scale-[1.5] origin-left" />
                 </div>
                 <p class="text-white/40 text-sm leading-relaxed max-w-xs">
                     Elite makeup and hair artistry for the red carpet and beyond. Sculpting the West Hollywood identity.
@@ -42,17 +42,20 @@ if (!defined('allowed')) { header('Location: /'); exit; }
             </div>
             
             <div>
-                <h4 class="text-xs font-bold tracking-widest uppercase mb-8 text-white mt-2">Join the Glow List</h4>
-                <p class="text-sm text-white/50 mb-4 leading-relaxed">Join our VIP list for exclusive booking availability.</p>
-                <form action="/index.php#footer" method="POST" class="flex flex-col gap-2">
-                    <div class="flex gap-2">
-                        <input name="email" class="bg-white/5 border border-white/10 rounded-lg flex-1 px-4 text-sm focus:ring-primary focus:border-primary text-white" placeholder="Your email" type="email" required />
-                        <button type="submit" class="bg-primary px-4 py-2 rounded-lg font-bold text-xs uppercase cursor-pointer hover:bg-white hover:text-primary transition-colors text-white">Join</button>
-                    </div>
-                    <?php if (isset($newsletter_msg) && !empty($newsletter_msg)): ?>
-                        <p class="text-xs text-primary mt-2"><?= htmlspecialchars($newsletter_msg) ?></p>
-                    <?php endif; ?>
-                </form>
+                <h4 class="text-xs font-bold tracking-widest uppercase mb-8 text-white mt-2">Studio Location</h4>
+                <p class="text-sm text-white/50 mb-4 leading-relaxed">Located in the heart of West Hollywood. By appointment only.</p>
+                <div class="relative w-full h-48 rounded-xl overflow-hidden border border-white/10 group">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.1566608664098!2d-118.3585138!3d34.0654981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2b934b4e31f3d%3A0xc5a77a32ae6a1f0e!2sJane%20Makeup%20%26%20Hair!5e0!3m2!1sen!2sus!4v1772249027531!5m2!1sen!2sus" 
+                        class="absolute inset-0 w-full h-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700"
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                    <!-- Subtle dark overlay to blend with the footer initially -->
+                    <div class="absolute inset-0 bg-background-dark/20 pointer-events-none group-hover:bg-transparent transition-colors duration-700"></div>
+                </div>
             </div>
         </div>
         
