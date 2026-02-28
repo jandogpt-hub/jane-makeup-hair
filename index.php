@@ -71,12 +71,13 @@ $homepage_services = [
 ];
 
 // ── Data: Gallery Images ─────────────────────────────────────────────
-$gallery_images = [
-    "https://lh3.googleusercontent.com/aida-public/AB6AXuAmfVVE-H0flAWmrMj0Z64Z2BxCmtWjfy5YfWb2NlwHa-RGjsS9B6-m1YbL3rF9TXrMkFXjcXTPVKAXdE4e0GOzDoJc85uq4-ALKsrkvoV3Nmw7InFjfBTFiv8WN70RghezCo4rdlUSneqB_VYlJlKbKIFgoVTwrxEhBoKXWZ3QCv-0N0sR2YVzTmJAbezjgISLQFUKwYcBHLzDhy1dzG3Cnc7OdH1Xh-xE1T9vvrNMsO_urtPNnTL--TDNHFI4jv2eF9rJRWuelsf7",
-    "https://lh3.googleusercontent.com/aida-public/AB6AXuAzb6lZFyRURcJLnOJgGrVYRv7SL40rQwkGRhfCtsyo2BWtv-OInFcHnvvliCWRme2K1Oxy-LwYpeH6Eyw9-cXl623p0IuVPnOib7wvKPrQDqqSnVpAcA5BRf-wb8ekhm0uKJFaHZuGnH15SmlFS0sP2JALbk3z13RO73OJu2_HFUBu56iYZDZNe1o0_gxt45BcCb2f9rRkQ0oq_N3JQ4QJoOJ22bPaqh-DRE1JTNLOF4LnInRA0NEkMTRgZ9eQQbmoQ7AA_Ma6D0Gq",
-    "https://lh3.googleusercontent.com/aida-public/AB6AXuBwlLPtHPR5GhIag5igpzzUt8B4PLej_sU5oAk8o30zoHyduiP_PlqX0eBTIH6TGLcJ94TxT_aVIdARmY9Ed5KA90YdlFnmYyIeKWZP9pJnyHtwK3n235Dzf-Y6HfKa1P_ve7iFLQXoS8IubY_0wbmyTJHl3tcKQi_G0YMOYon8R1XyqURFZUpwpW_ZE5O5ow0llMGM_c8ERovaFyQahPruZLnCbXuU2eR0ywR70wk4XEnOk5vzl6cNgu_BINPcve28llZ9teoVIA6E",
-    "https://lh3.googleusercontent.com/aida-public/AB6AXuCL3Xx83vw0yY94XPZ1cABZVkyyrFpLSZw6CcIFIwsXTHbFLYZ1yGrJGC0vaaQThJ1Lbz2Tb1I2L1vZQiNXsYItd6BpP7_iOa9CmeDZCA8i6cHD8MZP5hcX4mYWHLkUF1OxNir1zAIiFD9Vn2FkwyVPHgUqppeGwZ7Zjom0QgN313zNfp0Gm8GRnZl7Rgi0Cfsco7IQ51fiimdRB0PMA3rkEqElVtbL3FQfpZCPSdphjIPt1VrUjLML1YI5Tn4VPsk23Wu5lUhbrpmg"
-];
+// Temporarily using signature service images until more are added
+$gallery_images = array_map(function($service) {
+    return [
+        'src' => $service['image'],
+        'alt' => $service['alt']
+    ];
+}, array_filter($homepage_services, function($s) { return $s['type'] === 'image'; }));
 ?>
 
     <!-- ===== HERO SECTION ===== -->
@@ -906,14 +907,53 @@ $gallery_images = [
     </script>
 
     <!-- ===== GALLERY ===== -->
-    <section class="py-20 px-6 overflow-hidden bg-background-dark/50">
-        <h2 class="text-center text-xs font-bold text-primary uppercase tracking-[0.3em] mb-12">Seen on the Strip</h2>
-        <div class="flex gap-4 overflow-x-auto pb-8 snap-x no-scrollbar">
-            <?php foreach ($gallery_images as $index => $img_src): ?>
-                <div class="min-w-[280px] aspect-square rounded-lg overflow-hidden snap-center flex-shrink-0">
-                    <img class="w-full h-full object-cover" alt="Gallery image <?= $index + 1 ?>" src="<?= $img_src ?>"/>
-                </div>
-            <?php endforeach; ?>
+    <style>
+        @media (min-width: 768px) {
+            .gallery-scroller {
+                animation: galleryScroller 45s linear infinite;
+                will-change: transform;
+            }
+            .gallery-scroller:hover {
+                animation-play-state: paused;
+            }
+            @keyframes galleryScroller {
+                0% { transform: translateX(0); }
+                /* -50% shifts exactly half the track width, the -0.5rem perfectly offsets the gap-4 (16px / 1rem) at the middle! */
+                100% { transform: translateX(calc(-50% - 0.5rem)); }
+            }
+        }
+    </style>
+    <section class="py-24 relative overflow-hidden bg-background-dark/50">
+        <h2 class="text-center text-xs font-bold text-primary uppercase tracking-[0.3em] mb-8">West Hollywood and Surrounding Areas Clients</h2>
+        
+        <!-- Mobile/Touch scroll hint -->
+        <div class="md:hidden flex items-center justify-end px-6 mb-4">
+            <span class="text-[10px] font-bold uppercase tracking-widest text-white/50 flex items-center gap-1 animate-pulse">
+                Swipe for more <span class="material-symbols-outlined text-xs">arrow_forward</span>
+            </span>
+        </div>
+
+        <div class="relative w-full overflow-x-auto md:overflow-hidden no-scrollbar snap-x px-6 md:px-0">
+            <div class="flex gap-4 pb-8 md:pb-0 w-max relative z-10 gallery-scroller">
+                <?php 
+                // Double the array payload so the CSS marquee can infinitely scroll half its length seamlessly
+                $desktop_marquee_images = array_merge($gallery_images, $gallery_images);
+                foreach ($desktop_marquee_images as $index => $img): ?>
+                    <div class="w-[75vw] sm:w-[320px] aspect-[4/5] rounded-xl overflow-hidden snap-center flex-shrink-0 relative group border border-white/5">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="<?= htmlspecialchars($img['alt']) ?>" src="<?= htmlspecialchars($img['src']) ?>" loading="lazy"/>
+                        <!-- Inner shadow/vignette -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80 pointer-events-none"></div>
+                    </div>
+                <?php endforeach; ?>
+                
+                <!-- Spacer for the end so the last image doesn't hug the right edge on mobile -->
+                <div class="w-2 md:hidden flex-shrink-0"></div>
+            </div>
+            
+            <!-- Right Edge Fade Indicator (Desktop) -->
+            <div class="hidden md:block absolute top-0 right-0 bottom-0 w-48 bg-gradient-to-l from-background-dark via-background-dark/60 to-transparent pointer-events-none z-20" aria-hidden="true"></div>
+            <!-- Left Edge Fade Indicator (Desktop) -->
+            <div class="hidden md:block absolute top-0 left-0 bottom-0 w-48 bg-gradient-to-r from-background-dark via-background-dark/60 to-transparent pointer-events-none z-20" aria-hidden="true"></div>
         </div>
     </section>
 
