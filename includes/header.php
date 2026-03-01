@@ -62,6 +62,9 @@ include_once __DIR__ . '/config.php';
             },
         }
     </script>
+    
+    <!-- Legacy & Global Styles -->
+    <link rel="stylesheet" href="/assets/css/style.css" />
 
     <!-- Custom Styles -->
     <style>
