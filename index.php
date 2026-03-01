@@ -71,13 +71,28 @@ $homepage_services = [
 ];
 
 // ── Data: Gallery Images ─────────────────────────────────────────────
-// Temporarily using signature service images until more are added
-$gallery_images = array_map(function($service) {
-    return [
-        'src' => $service['image'],
-        'alt' => $service['alt']
-    ];
-}, array_filter($homepage_services, function($s) { return $s['type'] === 'image'; }));
+$gallery_images = [
+    [
+        'src' => 'https://res.cloudinary.com/jane-makeup-hair/image/upload/w_800,h_1000,c_fill,g_face,q_80,fl_keep_iptc/v1772307269/bridesmaids-jane-mobile-makeup-hair-west-hollywood-023_wtith8.jpg',
+        'alt' => 'Bridesmaids looking stunning with mobile makeup and hair by Jane in West Hollywood'
+    ],
+    [
+        'src' => 'https://res.cloudinary.com/jane-makeup-hair/image/upload/w_800,h_1000,c_fill,g_face,q_80,fl_keep_iptc/v1772307267/bridesmaid-makeup-jane-makeup-hair-west-hollywood_lnsfoa.jpg',
+        'alt' => 'Flawless bridesmaid makeup application by Jane on location in West Hollywood'
+    ],
+    [
+        'src' => 'https://res.cloudinary.com/jane-makeup-hair/image/upload/w_800,h_1000,c_fill,g_face,q_80,fl_keep_iptc/v1772307265/bridesmaid-jane-makeup-hair-west-hollywood_rwiiw3.jpg',
+        'alt' => 'Beautiful bridesmaid showing off her hair and makeup by Jane in West Hollywood'
+    ],
+    [
+        'src' => 'https://res.cloudinary.com/jane-makeup-hair/image/upload/w_800,h_1000,c_fill,g_face,q_80,fl_keep_iptc/v1772307264/bridal-updo-hairstyle-8-jane-makeup-hair-west-hollywood_f5jibq.jpg',
+        'alt' => 'Intricate bridal updo hairstyle back view by Jane in West Hollywood'
+    ],
+    [
+        'src' => 'https://res.cloudinary.com/jane-makeup-hair/image/upload/w_800,h_1000,c_fill,g_face,q_80,fl_keep_iptc/v1772307262/bridal-updo-hairstyle-6-jane-makeup-hair-west-hollywood_vyn77p.jpg',
+        'alt' => 'Elegant bridal updo hairstyle side profile by Jane in West Hollywood'
+    ]
+];
 ?>
 
     <!-- ===== HERO SECTION ===== -->
@@ -414,13 +429,13 @@ $gallery_images = array_map(function($service) {
     </section>
 
     <!-- ===== AS SEEN IN ===== -->
-    <section class="relative py-14 bg-background-dark overflow-hidden">
+    <section class="relative py-24 lg:py-32 bg-background-dark overflow-hidden mt-8">
         <!-- top & bottom hairlines -->
         <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
         <div class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
 
         <!-- label -->
-        <p class="text-center text-[10px] font-bold uppercase tracking-[0.4em] text-white/30 mb-8">As Seen In Production</p>
+        <p class="text-center text-[10px] font-bold uppercase tracking-[0.4em] text-white/30 mb-12">As Seen In Production</p>
 
         <!-- marquee track -->
         <div class="relative">
@@ -468,10 +483,10 @@ $gallery_images = array_map(function($service) {
         </div>
 
         <!-- ── Production Reel Video ─────────────────────────────────────── -->
-        <div class="relative z-10 max-w-6xl mx-auto mt-14 px-6">
+        <div class="relative z-10 max-w-6xl mx-auto mt-24 lg:mt-32 mb-10 px-6">
 
             <!-- Section micro-label -->
-            <p class="text-center text-[10px] font-bold uppercase tracking-[0.4em] text-white/25 mb-8">
+            <p class="text-center text-[10px] font-bold uppercase tracking-[0.4em] text-white/25 mb-10">
                 Featured Production Reel
             </p>
 

@@ -230,32 +230,32 @@ include_once __DIR__ . '/config.php';
         </div>
         
         <!-- Mobile Menu Overlay -->
-        <div id="mobile-menu" class="fixed top-0 left-0 w-full h-screen bg-background-dark/98 backdrop-blur-xl z-[60] hidden flex-col pt-24 px-6 gap-6 overflow-y-auto transition-opacity duration-300 pb-20">
-             <a href="/" class="text-2xl font-bold text-white border-b border-white/5 pb-4 uppercase tracking-tighter">Home</a>
+        <div id="mobile-menu" class="fixed top-0 left-0 w-full h-screen bg-[#050505] z-[60] hidden flex-col pt-24 px-6 gap-6 overflow-y-auto transition-opacity duration-300 pb-20">
+             <a href="/" class="text-2xl font-bold text-white border-b border-white/20 pb-4 uppercase tracking-tighter">Home</a>
              
              <!-- Mobile Services -->
-             <div class="flex flex-col gap-4">
-                <span class="text-xs font-bold text-primary uppercase tracking-widest">Services</span>
+             <div class="flex flex-col gap-5">
+                <span class="text-xs font-black text-primary uppercase tracking-[0.2em] opacity-100">Services</span>
                 <?php if(!empty($services)): foreach($services as $s): ?>
-                <a href="/services/<?php echo $s['slug']; ?>.php" class="text-lg text-white/70 pl-4 border-l border-white/10 hover:border-primary hover:text-white transition-all"><?php echo $s['name']; ?></a>
+                <a href="/services/<?php echo $s['slug']; ?>.php" class="text-xl text-white font-medium pl-4 border-l-2 border-white/20 hover:border-primary hover:text-primary transition-all"><?php echo $s['name']; ?></a>
                 <?php endforeach; endif; ?>
              </div>
 
-             <a href="/gallery.php" class="text-2xl font-bold text-white border-b border-white/5 pb-4 mt-2 uppercase tracking-tighter">Folio</a>
+             <a href="/gallery.php" class="text-2xl font-bold text-white border-b border-white/20 pb-4 mt-4 uppercase tracking-tighter">Folio</a>
              
              <!-- Mobile Areas -->
-             <div class="flex flex-col gap-4 border-b border-white/5 pb-4 mt-2">
-                <span class="text-xs font-bold text-primary uppercase tracking-widest">Available In</span>
+             <div class="flex flex-col gap-5 border-b border-white/20 pb-6 mt-4">
+                <span class="text-xs font-black text-primary uppercase tracking-[0.2em] opacity-100">Available In</span>
                 <?php if(!empty($areas)): foreach($areas as $a): ?>
-                <a href="/area-served/<?php echo $a['slug']; ?>.php" class="text-lg text-white/70 pl-4 border-l border-white/10 hover:border-primary hover:text-white transition-all"><?php echo $a['name']; ?></a>
+                <a href="/area-served/<?php echo $a['slug']; ?>.php" class="text-xl text-white font-medium pl-4 border-l-2 border-white/20 hover:border-primary hover:text-primary transition-all"><?php echo $a['name']; ?></a>
                 <?php endforeach; endif; ?>
              </div>
              
-             <a href="/about.php" class="text-2xl font-bold text-white border-b border-white/5 pb-4 uppercase tracking-tighter">About Jane</a>
+             <a href="/about.php" class="text-2xl font-bold text-white border-b border-white/20 pb-4 uppercase tracking-tighter mt-2">About Jane</a>
              
              <!-- Mobile CTA -->
              <div class="mt-8 space-y-4">
-                 <a href="/contact.php" class="block w-full text-center py-4 bg-primary hover:bg-white hover:text-primary transition-all duration-500 rounded-full text-white font-bold uppercase tracking-tighter shadow-lg">
+                 <a href="/contact.php" class="block w-full text-center py-5 bg-primary hover:bg-white hover:text-primary transition-all duration-500 rounded-full text-[#111] font-black uppercase tracking-widest shadow-lg text-sm">
                     Book Your Session
                  </a>
              </div>
