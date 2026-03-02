@@ -95,6 +95,7 @@ $gallery_images = [
 ];
 ?>
 
+<main class="font-display">
     <!-- ===== HERO SECTION ===== -->
     <section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 z-0">
@@ -1006,6 +1007,8 @@ $gallery_images = [
             </div>
         </div>
     </section>
+
+</main>
 
 <?php
 // ── Include Footer ───────────────────────────────────────────────────

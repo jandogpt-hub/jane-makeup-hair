@@ -6,7 +6,7 @@
 if (!defined('allowed')) { header('Location: /'); exit; }
 ?>
     <!-- BEGIN: Footer -->
-    <footer class="bg-[#0A0A0A] border-t border-white/5 pt-24 pb-12 text-white relative z-10">
+    <footer class="bg-[#0A0A0A] border-t border-white/5 pt-24 pb-12 text-white relative z-10 font-display">
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
             <div class="space-y-6">
                 <!-- Logo/Brand Area -->

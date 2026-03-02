@@ -30,6 +30,10 @@ include_once __DIR__ . '/config.php';
     <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
+            corePlugins: {
+                preflight: false,
+                container: false
+            },
             theme: {
                 extend: {
                     colors: {
@@ -140,11 +144,11 @@ include_once __DIR__ . '/config.php';
         }
     </style>
 </head>
-<body class="bg-background-dark font-display text-white selection:bg-primary selection:text-white overflow-x-hidden">
+<body class="bg-background-dark text-white selection:bg-primary selection:text-white overflow-x-hidden">
     <div class="grain-overlay"></div>
 
     <!-- Navigation (Inspired by DT Painter UX Framework) -->
-    <nav class="fixed top-0 w-full z-[100] py-3 lg:py-4 transition-all duration-300 mix-blend-difference" id="main-nav">
+    <nav class="fixed top-0 w-full z-[100] py-3 lg:py-4 transition-all duration-300 mix-blend-difference font-display" id="main-nav">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 flex justify-between items-center h-16">
             
             <!-- Logo -->
@@ -168,7 +172,7 @@ include_once __DIR__ . '/config.php';
                 
                 <!-- Services Dropdown (From Config) -->
                 <div class="relative group">
-                    <button class="flex items-center gap-1 hover:text-primary transition-colors focus:outline-none py-4">
+                    <button class="flex items-center gap-1 hover:text-primary transition-colors focus:outline-none py-4 bg-transparent border-none text-white font-medium text-sm tracking-widest uppercase cursor-pointer">
                         Services
                         <svg class="w-4 h-4 text-white/50 group-hover:text-primary transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -189,7 +193,7 @@ include_once __DIR__ . '/config.php';
 
                 <!-- Areas Served Dropdown (From Config) -->
                 <div class="relative group">
-                    <button class="flex items-center gap-1 hover:text-primary transition-colors focus:outline-none py-4">
+                    <button class="flex items-center gap-1 hover:text-primary transition-colors focus:outline-none py-4 bg-transparent border-none text-white font-medium text-sm tracking-widest uppercase cursor-pointer">
                         Available In
                         <svg class="w-4 h-4 text-white/50 group-hover:text-primary transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -226,7 +230,7 @@ include_once __DIR__ . '/config.php';
             
             <!-- Mobile Menu Button -->
             <div class="lg:hidden flex items-center z-[70]">
-                 <button id="mobile-menu-btn" class="text-white p-2 focus:outline-none relative">
+                 <button id="mobile-menu-btn" class="text-white p-2 focus:outline-none relative bg-transparent border-none cursor-pointer">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                  </button>
             </div>
