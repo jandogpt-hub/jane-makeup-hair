@@ -224,6 +224,45 @@ $gallery_images = [
     </section>
 
 
+    <!-- ===== SERVICES GRID ===== -->
+    <section class="max-w-7xl mx-auto px-6 py-28 bg-background-dark relative z-20">
+        <div class="flex items-end justify-between mb-16 border-b border-white/10 pb-6">
+            <div>
+                <h3 class="text-xs font-bold text-primary uppercase tracking-[0.45em] mb-4">Our Artistry</h3>
+                <h2 class="text-4xl md:text-5xl font-black tracking-tighter uppercase leading-none text-white">Signature Services</h2>
+            </div>
+            <a class="text-primary text-sm font-bold border-b border-primary pb-1 uppercase tracking-widest hover:text-white hover:border-white transition-colors" href="#">See All</a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <?php foreach ($homepage_services as $service): ?>
+                <?php if ($service['type'] === 'image'): ?>
+                    <div class="group relative aspect-[4/5] overflow-hidden rounded-2xl border border-white/10" style="background: rgba(255,255,255,0.02)">
+                        <img class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 group-hover:opacity-80 transition-all duration-700 filter grayscale" alt="<?= htmlspecialchars($service['alt']) ?>" src="<?= $service['image'] ?>"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/60 to-transparent"></div>
+                        <div class="absolute bottom-8 left-8 right-8">
+                            <h4 class="text-2xl font-bold tracking-tight uppercase mb-2 text-white"><?= $service['title'] ?></h4>
+                            <p class="text-white/70 text-sm mb-6 leading-relaxed"><?= $service['desc'] ?></p>
+                            <div class="h-12 w-12 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-primary transition-colors duration-300">
+                                <span class="material-symbols-outlined text-white text-sm">east</span>
+                            </div>
+                        </div>
+                    </div>
+                <?php else: ?>
+                    <div class="group relative aspect-[4/5] overflow-hidden rounded-2xl bg-white/5 border border-white/10 hover:border-primary/50 transition-colors duration-500">
+                        <div class="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary via-transparent to-transparent"></div>
+                        <div class="absolute inset-0 flex flex-col items-center justify-center p-8 text-center">
+                            <span class="material-symbols-outlined text-primary text-5xl mb-6"><?= $service['icon'] ?></span>
+                            <h4 class="text-2xl font-black uppercase tracking-tight mb-3 text-white"><?= $service['title'] ?></h4>
+                            <p class="text-white/60 text-sm mb-8 leading-relaxed"><?= $service['desc'] ?></p>
+                            <button class="bg-primary text-background-dark font-black text-xs uppercase tracking-widest px-8 py-4 rounded-full hover:bg-primary-hover transition-colors shadow-lg" style="box-shadow: 0 0 20px rgba(201,168,76,0.15);"><?= $service['button'] ?></button>
+                        </div>
+                    </div>
+                <?php endif; ?>
+            <?php endforeach; ?>
+        </div>
+    </section>
+
     <!-- ===== WHY CHOOSE US ===== -->
     <section id="why-jane" class="relative py-28 px-6 bg-background-dark overflow-hidden">
 
@@ -391,44 +430,7 @@ $gallery_images = [
     </script>
 
 
-    <!-- ===== SERVICES GRID ===== -->
-    <section class="px-6 py-20 bg-background-dark relative">
-        <div class="flex items-end justify-between mb-12">
-            <div>
-                <h3 class="text-xs font-bold text-primary uppercase tracking-widest mb-2">Our Artistry</h3>
-                <h2 class="text-3xl font-bold tracking-tight">Signature Services</h2>
-            </div>
-            <a class="text-primary text-sm font-bold border-b border-primary pb-1" href="#">See All</a>
-        </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <?php foreach ($homepage_services as $service): ?>
-                <?php if ($service['type'] === 'image'): ?>
-                    <div class="group relative aspect-[4/5] overflow-hidden rounded-xl glass border-white/5">
-                        <img class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-110 transition-transform duration-700" alt="<?= htmlspecialchars($service['alt']) ?>" src="<?= $service['image'] ?>"/>
-                        <div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent"></div>
-                        <div class="absolute bottom-6 left-6 right-6">
-                            <h4 class="text-xl font-bold mb-1"><?= $service['title'] ?></h4>
-                            <p class="text-white/60 text-sm mb-4"><?= $service['desc'] ?></p>
-                            <div class="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-primary transition-colors">
-                                <span class="material-symbols-outlined text-sm">add</span>
-                            </div>
-                        </div>
-                    </div>
-                <?php else: ?>
-                    <div class="group relative aspect-[4/5] overflow-hidden rounded-xl bg-primary/10 border border-primary/20">
-                        <div class="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary via-transparent to-transparent"></div>
-                        <div class="absolute inset-0 flex flex-col items-center justify-center p-8 text-center">
-                            <span class="material-symbols-outlined text-primary text-5xl mb-4"><?= $service['icon'] ?></span>
-                            <h4 class="text-2xl font-bold mb-2"><?= $service['title'] ?></h4>
-                            <p class="text-white/70 text-sm mb-6 leading-relaxed"><?= $service['desc'] ?></p>
-                            <button class="bg-primary text-white px-6 py-3 rounded-lg font-bold text-sm tracking-wide"><?= $service['button'] ?></button>
-                        </div>
-                    </div>
-                <?php endif; ?>
-            <?php endforeach; ?>
-        </div>
-    </section>
 
     <!-- ===== AS SEEN IN ===== -->
     <section class="relative py-24 lg:py-32 bg-background-dark overflow-hidden mt-8">
