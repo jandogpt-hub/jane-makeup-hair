@@ -24,12 +24,12 @@ require_once __DIR__ . '/../includes/header.php';
     <!-- HERO -->
     <section class="relative px-6 py-24 md:py-32 overflow-hidden border-solid border-b border-white/10">
         <div class="absolute inset-0 z-0">
-            <img class="w-full h-full object-cover object-center opacity-20 filter grayscale" alt="West Hollywood, CA - Jane Makeup & Hair" src="https://res.cloudinary.com/jane-makeup-hair/image/upload/w_2000,c_scale,q_80,fl_keep_iptc/v1772435225/AHVAweqkoFFX11GiN4aZJMLEC4mVWQxnY_Rr18blC2HGy12G3ITW9_BBWWClSkpcJLr-gdEg__gjlFNwxSi6sdh90TU7HZjk0DLlwEbtV_xXUjVPcL0p6H5PFtuz1bMM9wNvNPvQdwlg_w503_agxfr8.jpg" />
+            <img class="w-full h-full min-w-full min-h-full max-w-none object-cover object-center opacity-20 filter grayscale" alt="West Hollywood, CA - Jane Makeup & Hair" src="https://res.cloudinary.com/jane-makeup-hair/image/upload/w_2000,c_scale,q_80,fl_keep_iptc/v1772435225/AHVAweqkoFFX11GiN4aZJMLEC4mVWQxnY_Rr18blC2HGy12G3ITW9_BBWWClSkpcJLr-gdEg__gjlFNwxSi6sdh90TU7HZjk0DLlwEbtV_xXUjVPcL0p6H5PFtuz1bMM9wNvNPvQdwlg_w503_agxfr8.jpg" />
             <div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/80 to-transparent"></div>
         </div>
         <div class="container relative z-10 max-w-4xl mx-auto text-center">
             <p class="text-xs font-bold uppercase tracking-[0.45em] text-primary mb-4">City Guide</p>
-            <h1 class="text-[9.5vw] md:text-6xl font-black uppercase tracking-tighter mb-6 leading-none">What To Do While Visiting <?php echo $city; ?>?</h1>
+            <h1 class="text-[8vw] md:text-6xl font-black uppercase tracking-tighter mb-6 leading-none">What To Do While Visiting <?php echo $city; ?>?</h1>
             <p class="text-lg md:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">Known as one of LA’s most vibrant and style-conscious neighborhoods, West Hollywood is the heart of design, entertainment, and nightlife on the Sunset Strip.</p>
         </div>
     </section>

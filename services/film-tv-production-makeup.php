@@ -17,12 +17,12 @@ require_once __DIR__ . '/../includes/header.php';
     <!-- HERO -->
     <section class="relative px-6 py-24 md:py-32 overflow-hidden border-solid border-b border-white/10">
         <div class="absolute inset-0 z-0">
-            <img class="w-full h-full object-cover object-top opacity-20 filter grayscale" alt="Jane providing professional film and TV production makeup on set in West Hollywood" src="https://res.cloudinary.com/jane-makeup-hair/image/upload/w_2000,h_1333,c_fill,g_face,q_80,fl_keep_iptc/v1772246460/jane-mobile-makeup-hair-west-hollywood-004_pqyhxg.jpg" />
+            <img class="w-full h-full min-w-full min-h-full max-w-none object-cover object-top opacity-20 filter grayscale" alt="Jane providing professional film and TV production makeup on set in West Hollywood" src="https://res.cloudinary.com/jane-makeup-hair/image/upload/w_2000,h_1333,c_fill,g_face,q_80,fl_keep_iptc/v1772246460/jane-mobile-makeup-hair-west-hollywood-004_pqyhxg.jpg" />
             <div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/80 to-transparent"></div>
         </div>
         <div class="container relative z-10 max-w-4xl mx-auto text-center">
             <p class="text-xs font-bold uppercase tracking-[0.45em] text-primary mb-4">West Hollywood's Choice</p>
-            <h1 class="text-[9.5vw] md:text-6xl font-black uppercase tracking-tighter mb-6 leading-none">Film, TV & Production</h1>
+            <h1 class="text-[8vw] md:text-6xl font-black uppercase tracking-tighter mb-6 leading-none">Film, TV & Production</h1>
             <p class="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed">Jane has spent 15+ years on professional sets across Los Angeles — delivering camera-ready makeup for film, television, music videos, and commercial productions that holds through full shoot days.</p>
             <a href="/contact.php" class="inline-flex px-8 py-4 bg-primary text-background-dark font-black text-sm uppercase tracking-widest rounded-full hover:bg-primary-hover transition-colors shadow-lg" style="box-shadow: 0 0 30px rgba(201,168,76,0.35);">Inquire About Production Bookings</a>
         </div>
@@ -132,7 +132,7 @@ require_once __DIR__ . '/../includes/header.php';
     <!-- CTA -->
     <section class="px-6 py-32 relative text-center">
         <div class="container max-w-3xl mx-auto relative z-10">
-            <h2 class="text-[8.5vw] md:text-5xl font-black uppercase tracking-tighter mb-6">Inquire About Your Production</h2>
+            <h2 class="text-[7.5vw] md:text-5xl font-black uppercase tracking-tighter mb-6">Inquire About Your Production</h2>
             <p class="text-lg text-white/70 mb-10 leading-relaxed">Send Jane your shoot dates, location, headcount, and production type. She'll confirm availability and provide a production rate quote within 24 hours.</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="/contact.php" class="px-8 py-4 bg-primary text-background-dark font-black text-sm uppercase tracking-widest rounded-full hover:bg-primary-hover transition-colors shadow-lg" style="box-shadow: 0 0 30px rgba(201,168,76,0.35);">Submit a Production Inquiry</a>

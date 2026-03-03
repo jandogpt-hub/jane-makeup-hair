@@ -17,12 +17,12 @@ require_once __DIR__ . '/../includes/header.php';
     <!-- HERO -->
     <section class="relative px-6 py-24 md:py-32 overflow-hidden border-solid border-b border-white/10">
         <div class="absolute inset-0 z-0">
-            <img class="w-full h-full object-cover object-top opacity-20 filter grayscale" alt="Special Event Makeup and Hair by Jane in West Hollywood" src="https://res.cloudinary.com/jane-makeup-hair/image/upload/w_2000,h_1333,c_fill,g_face,q_80,fl_keep_iptc/v1772245395/jane-mobile-makeup-hair-west-hollywood-special-event_anxo6m.jpg" />
+            <img class="w-full h-full min-w-full min-h-full max-w-none object-cover object-top opacity-20 filter grayscale" alt="Special Event Makeup and Hair by Jane in West Hollywood" src="https://res.cloudinary.com/jane-makeup-hair/image/upload/w_2000,h_1333,c_fill,g_face,q_80,fl_keep_iptc/v1772245395/jane-mobile-makeup-hair-west-hollywood-special-event_anxo6m.jpg" />
             <div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/80 to-transparent"></div>
         </div>
         <div class="container relative z-10 max-w-4xl mx-auto text-center">
             <p class="text-xs font-bold uppercase tracking-[0.45em] text-primary mb-4">West Hollywood's Choice</p>
-            <h1 class="text-[9.5vw] md:text-6xl font-black uppercase tracking-tighter mb-6 leading-none">Special Event Makeup & Hair</h1>
+            <h1 class="text-[8vw] md:text-6xl font-black uppercase tracking-tighter mb-6 leading-none">Special Event Makeup & Hair</h1>
             <p class="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed">Galas, red carpet, birthday glam, prom, quinceañeras, award ceremonies — Jane delivers camera-ready makeup and hair styling directly to your location, every time.</p>
             <a href="/contact.php" class="inline-flex px-8 py-4 bg-primary text-background-dark font-black text-sm uppercase tracking-widest rounded-full hover:bg-primary-hover transition-colors shadow-lg" style="box-shadow: 0 0 30px rgba(201,168,76,0.35);">Book Your Event Look</a>
         </div>
@@ -132,7 +132,7 @@ require_once __DIR__ . '/../includes/header.php';
     <!-- CTA -->
     <section class="px-6 py-32 relative text-center">
         <div class="container max-w-3xl mx-auto relative z-10">
-            <h2 class="text-[8.5vw] md:text-5xl font-black uppercase tracking-tighter mb-6">Book Your Event Glam</h2>
+            <h2 class="text-[7.5vw] md:text-5xl font-black uppercase tracking-tighter mb-6">Book Your Event Glam</h2>
             <p class="text-lg text-white/70 mb-10 leading-relaxed">Tell Jane the event, the date, and your vision. She'll handle the rest — makeup, hair, and timing — so you arrive looking exactly the way you imagined.</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="/contact.php" class="px-8 py-4 bg-primary text-background-dark font-black text-sm uppercase tracking-widest rounded-full hover:bg-primary-hover transition-colors shadow-lg" style="box-shadow: 0 0 30px rgba(201,168,76,0.35);">Book Your Event Look</a>
