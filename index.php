@@ -238,7 +238,7 @@ $gallery_images = [
             <?php foreach ($homepage_services as $service): ?>
                 <?php if ($service['type'] === 'image'): ?>
                     <div class="group relative aspect-[4/5] overflow-hidden rounded-2xl border border-white/10" style="background: rgba(255,255,255,0.02)">
-                        <img class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 group-hover:opacity-80 transition-all duration-700 filter grayscale" alt="<?= htmlspecialchars($service['alt']) ?>" src="<?= $service['image'] ?>"/>
+                        <img class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 group-hover:opacity-80 transition-all duration-700" alt="<?= htmlspecialchars($service['alt']) ?>" src="<?= $service['image'] ?>"/>
                         <div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/60 to-transparent"></div>
                         <div class="absolute bottom-8 left-8 right-8">
                             <h4 class="text-2xl font-bold tracking-tight uppercase mb-2 text-white"><?= $service['title'] ?></h4>
