@@ -230,13 +230,13 @@ $gallery_images = [
 
 
     <!-- ===== SERVICES GRID ===== -->
-    <section class="max-w-7xl mx-auto px-6 py-28 bg-background-dark relative z-20">
-        <div class="flex items-end justify-between mb-16 border-b border-white/10 pb-6">
+    <section class="max-w-7xl mx-auto px-6 py-28 bg-background-dark relative z-20 overflow-hidden">
+        <div class="flex flex-col md:flex-row items-start md:items-end justify-between gap-6 md:gap-0 mb-16 border-b border-white/10 pb-6">
             <div>
-                <h3 class="text-xs font-bold text-primary uppercase tracking-[0.45em] mb-4">Our Artistry</h3>
+                <h3 class="text-[10px] md:text-xs font-bold text-primary uppercase tracking-[0.3em] md:tracking-[0.45em] mb-4">Our Artistry</h3>
                 <h2 class="text-4xl md:text-5xl font-black tracking-tighter uppercase leading-none text-white">Signature Services</h2>
             </div>
-            <a class="text-primary text-sm font-bold border-b border-primary pb-1 uppercase tracking-widest hover:text-white hover:border-white transition-colors" href="#">See All</a>
+            <a class="text-primary text-sm font-bold border-b border-primary pb-1 uppercase tracking-widest hover:text-white hover:border-white transition-colors flex-shrink-0" href="#">See All</a>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
