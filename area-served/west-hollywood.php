@@ -24,7 +24,7 @@ require_once __DIR__ . '/../includes/header.php';
     <!-- HERO -->
     <section class="relative px-6 py-24 md:py-32 overflow-hidden border-solid border-b border-white/10">
         <div class="absolute inset-0 z-0">
-            <img class="w-full h-full object-cover object-top opacity-20 filter grayscale" alt="West Hollywood, CA - Sunset Strip and City Views" src="https://res.cloudinary.com/jane-makeup-hair/image/upload/w_2000,h_1333,c_fill,g_face,q_80,fl_keep_iptc/v1772435225/AHVAweqkoFFX11GiN4aZJMLEC4mVWQxnY_Rr18blC2HGy12G3ITW9_BBWWClSkpcJLr-gdEg__gjlFNwxSi6sdh90TU7HZjk0DLlwEbtV_xXUjVPcL0p6H5PFtuz1bMM9wNvNPvQdwlg_w503_agxfr8.jpg" />
+            <img class="w-full h-full object-cover object-center opacity-20 filter grayscale" alt="West Hollywood, CA - Jane Makeup & Hair" src="https://res.cloudinary.com/jane-makeup-hair/image/upload/w_2000,c_scale,q_80,fl_keep_iptc/v1772435225/AHVAweqkoFFX11GiN4aZJMLEC4mVWQxnY_Rr18blC2HGy12G3ITW9_BBWWClSkpcJLr-gdEg__gjlFNwxSi6sdh90TU7HZjk0DLlwEbtV_xXUjVPcL0p6H5PFtuz1bMM9wNvNPvQdwlg_w503_agxfr8.jpg" />
             <div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/80 to-transparent"></div>
         </div>
         <div class="container relative z-10 max-w-4xl mx-auto text-center">
