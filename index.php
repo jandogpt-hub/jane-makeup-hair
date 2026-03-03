@@ -98,15 +98,21 @@ $gallery_images = [
 <main class="font-display">
     <!-- ===== HERO SECTION ===== -->
     <section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0 z-0">
-            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-background-dark/20 to-background-dark z-10"></div>
-            <img class="w-full h-full object-cover object-top scale-110 filter grayscale brightness-75"
+        <div class="absolute inset-0 z-0 bg-background-dark">
+            <!-- Desktop: Parallax background using g_face crop (focus on eyes) -->
+            <div class="hidden md:block absolute inset-0 bg-cover bg-center bg-fixed filter grayscale brightness-75"
+                 style="background-image: url('https://res.cloudinary.com/jane-makeup-hair/image/upload/w_2400,h_1600,c_fill,g_face,q_80,fl_keep_iptc/v1772164687/janes-makeup-hair-headshot_m3azif.jpg');"></div>
+            
+            <!-- Mobile: Static img tag using scaled crop to prevent extreme zooming -->
+            <img class="block md:hidden w-full h-full object-cover object-center filter grayscale brightness-[0.65]"
                  alt="Jane — West Hollywood mobile makeup and hair artist"
-                 src="https://res.cloudinary.com/jane-makeup-hair/image/upload/w_2400,h_1600,c_fill,g_face,q_80,fl_keep_iptc/v1772164687/janes-makeup-hair-headshot_m3azif.jpg"
-                 width="2400"
-                 height="1600"
+                 src="https://res.cloudinary.com/jane-makeup-hair/image/upload/w_800,c_scale,q_80,fl_keep_iptc/v1772164687/janes-makeup-hair-headshot_m3azif.jpg"
+                 width="800"
+                 height="1200"
                  fetchpriority="high"
                  decoding="async"/>
+            
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-background-dark/20 to-background-dark z-10"></div>
         </div>
 
         <!-- Semantic triplet: WHO + WHAT + WHERE -->
