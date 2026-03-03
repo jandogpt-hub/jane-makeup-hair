@@ -640,7 +640,7 @@ $gallery_images = [
             </div>
 
             <!-- Instruction hint -->
-            <p class="text-center text-[10px] font-bold uppercase tracking-[0.35em] text-white/20 mt-8">
+            <p class="text-center text-[10px] font-bold uppercase tracking-[0.35em] text-white/40 mt-8">
                 Click a card to read the next review
             </p>
         </div>

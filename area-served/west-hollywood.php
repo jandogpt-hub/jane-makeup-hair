@@ -42,24 +42,24 @@ require_once __DIR__ . '/../includes/header.php';
                 <h2 class="text-3xl font-black uppercase tracking-tight mb-10 text-primary border-b border-white/10 pb-4">Top Attractions for Visitors</h2>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                    <div class="p-8 rounded-2xl border-solid border border-white/10 bg-white/5 hover:bg-white/10 transition-colors flex flex-col h-full">
+                    <div class="p-5 sm:p-6 md:p-8 rounded-2xl border-solid border border-white/10 bg-white/5 hover:bg-white/10 transition-colors flex flex-col h-full">
                         <img src="/assets/images/area-served/west-hollywood/sunset-strip.jpg" alt="The Sunset Strip in West Hollywood" class="w-full h-48 object-cover rounded-xl mb-6 filter grayscale opacity-80" />
                         <h3 class="text-xl font-bold mb-3 text-white">The Sunset Strip</h3>
                         <p class="text-white/70 leading-relaxed flex-grow">Experience a legendary 1.5-mile stretch of Sunset Boulevard wrapped in iconic billboards, rock clubs like The Roxy and Viper Room, and elevated dining. It remains the glittering epicenter of West Hollywood's entertainment legacy.</p>
                     </div>
                     
-                    <div class="p-8 rounded-2xl border-solid border border-white/10 bg-white/5 hover:bg-white/10 transition-colors flex flex-col h-full">
+                    <div class="p-5 sm:p-6 md:p-8 rounded-2xl border-solid border border-white/10 bg-white/5 hover:bg-white/10 transition-colors flex flex-col h-full">
                         <img src="/assets/images/area-served/west-hollywood/pacific-design-center.jpg" alt="Pacific Design Center in West Hollywood" class="w-full h-48 object-cover rounded-xl mb-6 filter grayscale opacity-80" />
                         <h3 class="text-xl font-bold mb-3 text-white">Pacific Design Center (PDC)</h3>
                         <p class="text-white/70 leading-relaxed flex-grow">Dubbed the "Blue Whale" for its striking massive blue glass exterior, the PDC is a multi-use facility for the design community featuring over 100 showrooms of high-end furniture, fabrics, and architectural products.</p>
                     </div>
                     
-                    <div class="p-8 rounded-2xl border-solid border border-white/10 bg-white/5 hover:bg-white/10 transition-colors">
+                    <div class="p-5 sm:p-6 md:p-8 rounded-2xl border-solid border border-white/10 bg-white/5 hover:bg-white/10 transition-colors">
                         <h3 class="text-xl font-bold mb-3 text-white">Santa Monica Boulevard (Route 66)</h3>
                         <p class="text-white/70 leading-relaxed">This bustling thoroughfare serves as the cultural hub of WeHo. Known for its LGBTQ+ history, it offers highly active nightlife, eclectic boutiques, and some of the best people-watching spots in greater Los Angeles.</p>
                     </div>
 
-                    <div class="p-8 rounded-2xl border-solid border border-white/10 bg-white/5 hover:bg-white/10 transition-colors">
+                    <div class="p-5 sm:p-6 md:p-8 rounded-2xl border-solid border border-white/10 bg-white/5 hover:bg-white/10 transition-colors">
                         <h3 class="text-xl font-bold mb-3 text-white">Chateau Marmont</h3>
                         <p class="text-white/70 leading-relaxed">Perched just above the Sunset Strip, this castle-like boutique hotel has hosted Hollywood elite since the 1920s. Stop by the famously secluded patio restaurant for a cocktail and a taste of old Hollywood glamour.</p>
                     </div>

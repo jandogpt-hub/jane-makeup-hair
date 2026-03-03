@@ -53,27 +53,27 @@ require_once __DIR__ . '/../includes/header.php';
                 <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tighter">Who Airbrush Is Best For</h2>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
+                <div class="p-5 sm:p-6 md:p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
                     <h3 class="text-xl font-bold mb-3 text-primary">Brides</h3>
                     <p class="text-white/60 text-sm leading-relaxed">All-day hold through ceremony, portraits, and reception. No cracking, no transfer on veils or clothing. The definitive bridal foundation application method.</p>
                 </div>
-                <div class="p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
+                <div class="p-5 sm:p-6 md:p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
                     <h3 class="text-xl font-bold mb-3 text-primary">Photography Subjects</h3>
                     <p class="text-white/60 text-sm leading-relaxed">Headshots, portraits, editorial, and product — airbrush eliminates the texture and unevenness that cameras amplify, producing naturally flawless skin in every frame.</p>
                 </div>
-                <div class="p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
+                <div class="p-5 sm:p-6 md:p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
                     <h3 class="text-xl font-bold mb-3 text-primary">Events in Warm Climates</h3>
                     <p class="text-white/60 text-sm leading-relaxed">Outdoor weddings, summer galas, venue events with dance floors — airbrush holds longer than traditional foundation in heat and high-activity settings.</p>
                 </div>
-                <div class="p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
+                <div class="p-5 sm:p-6 md:p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
                     <h3 class="text-xl font-bold mb-3 text-primary">Sensitive Skin</h3>
                     <p class="text-white/60 text-sm leading-relaxed">The application method avoids direct tool contact with the skin, making it ideal for reactive or sensitized complexions that don't respond well to heavy brush pressure.</p>
                 </div>
-                <div class="p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
+                <div class="p-5 sm:p-6 md:p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
                     <h3 class="text-xl font-bold mb-3 text-primary">Film & Video</h3>
                     <p class="text-white/60 text-sm leading-relaxed">Continuity makeup for productions requiring a consistent, camera-stable foundation across a multi-hour or multi-day shoot day.</p>
                 </div>
-                <div class="p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
+                <div class="p-5 sm:p-6 md:p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
                     <h3 class="text-xl font-bold mb-3 text-primary">Skin Tone Customization</h3>
                     <p class="text-white/60 text-sm leading-relaxed">Jane custom-blends airbrush shades to your exact undertone and depth — no pulling from a pre-set color range, no guessing at a match.</p>
                 </div>
@@ -90,7 +90,7 @@ require_once __DIR__ . '/../includes/header.php';
                     <p class="text-white/70 mb-5 leading-relaxed">Jane uses professional-grade airbrush systems and high-pigment, water-activated, and silicone-based formulas calibrated to your skin type and the intended finish — matte for photography, luminous for brides and events.</p>
                     <p class="text-white/70 leading-relaxed">She layers build-able coverage starting sheer and adding depth only where needed, so the result always looks like great skin rather than coverage.</p>
                 </div>
-                <div class="p-8 rounded-2xl border-solid border border-white/10 relative overflow-hidden" style="background: rgba(255,255,255,0.02);">
+                <div class="p-5 sm:p-6 md:p-8 rounded-2xl border-solid border border-white/10 relative overflow-hidden" style="background: rgba(255,255,255,0.02);">
                     <div class="absolute -top-4 -left-2 text-[100px] font-serif text-primary/20 leading-none opacity-50">&ldquo;</div>
                     <p class="text-lg md:text-xl font-medium leading-relaxed text-white/90 relative z-10 italic mb-6">"I was honestly nervous about airbrush because I have oily skin, but Jane matched my shade perfectly and it lasted through our entire reception without a single touch-up. My photographer could not stop complimenting my skin in the photos."</p>
                     <div class="relative z-10 flex items-center justify-between">

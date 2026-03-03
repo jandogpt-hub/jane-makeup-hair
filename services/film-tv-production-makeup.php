@@ -53,27 +53,27 @@ require_once __DIR__ . '/../includes/header.php';
                 <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tighter">Production Types We Support</h2>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
+                <div class="p-5 sm:p-6 md:p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
                     <h3 class="text-xl font-bold mb-3 text-primary">Film & Independent</h3>
                     <p class="text-white/60 text-sm leading-relaxed">Studio and independent films across all genres. Jane handles continuity, department coordination, and camera-ready application — from DPs and leads to supporting cast.</p>
                 </div>
-                <div class="p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
+                <div class="p-5 sm:p-6 md:p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
                     <h3 class="text-xl font-bold mb-3 text-primary">Television & Streaming</h3>
                     <p class="text-white/60 text-sm leading-relaxed">Scripted drama, comedy series, reality formats, talk shows, and streaming originals. High-volume sets with tight turnaround — Jane stays on pace without sacrificing quality.</p>
                 </div>
-                <div class="p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
+                <div class="p-5 sm:p-6 md:p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
                     <h3 class="text-xl font-bold mb-3 text-primary">Music Videos</h3>
                     <p class="text-white/60 text-sm leading-relaxed">Major label and independent productions. Bold, editorial looks built to photograph under creative lighting — or clean, natural looks for performance-focused concepts.</p>
                 </div>
-                <div class="p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
+                <div class="p-5 sm:p-6 md:p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
                     <h3 class="text-xl font-bold mb-3 text-primary">Commercials & Advertising</h3>
                     <p class="text-white/60 text-sm leading-relaxed">Brand campaigns, national TV spots, digital advertising shoots, and product photography. Makeup that reads on camera and communicates the brand's visual identity.</p>
                 </div>
-                <div class="p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
+                <div class="p-5 sm:p-6 md:p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
                     <h3 class="text-xl font-bold mb-3 text-primary">Broadcast & News</h3>
                     <p class="text-white/60 text-sm leading-relaxed">On-camera talent makeup for news, broadcast, documentaries, and podcast video productions. Natural, polished, and calibrated for HD studio lighting rigs.</p>
                 </div>
-                <div class="p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
+                <div class="p-5 sm:p-6 md:p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
                     <h3 class="text-xl font-bold mb-3 text-primary">On-Location Sets</h3>
                     <p class="text-white/60 text-sm leading-relaxed">Jane is fully mobile with a self-contained kit. She travels to your stage, location, or studio — no fixed address needed, no compromises on setup quality.</p>
                 </div>
@@ -89,15 +89,15 @@ require_once __DIR__ . '/../includes/header.php';
                 <p class="text-white/70">The entertainment industry in West Hollywood and greater LA is dense with competition — which means productions can be selective. Jane brings a combination of technical skill, professionalism, and on-set experience that keeps her on call lists for repeat productions. She's worked alongside DoPs and directors who trust that the makeup they see in the monitor is the makeup they intended.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="p-8 rounded-2xl border-solid border border-white/10 relative overflow-hidden group" style="background: rgba(255,255,255,0.02);">
+                <div class="p-5 sm:p-6 md:p-8 rounded-2xl border-solid border border-white/10 relative overflow-hidden group" style="background: rgba(255,255,255,0.02);">
                     <h3 class="text-xl font-bold mb-3 text-primary relative z-10">HD & Camera-Calibrated</h3>
                     <p class="text-white/60 text-sm leading-relaxed relative z-10">Every look is built with an understanding of how makeup reads on sensor — color correction for daylight vs. tungsten, specular highlights, and texture management.</p>
                 </div>
-                <div class="p-8 rounded-2xl border-solid border border-white/10 relative overflow-hidden group" style="background: rgba(255,255,255,0.02);">
+                <div class="p-5 sm:p-6 md:p-8 rounded-2xl border-solid border border-white/10 relative overflow-hidden group" style="background: rgba(255,255,255,0.02);">
                     <h3 class="text-xl font-bold mb-3 text-primary relative z-10">Continuity Discipline</h3>
                     <p class="text-white/60 text-sm leading-relaxed relative z-10">Detailed notes and reference photos after every setup change. Productions with long shoot days or multi-day schedules stay consistent from first take to last.</p>
                 </div>
-                <div class="p-8 rounded-2xl border-solid border border-white/10 relative overflow-hidden group" style="background: rgba(255,255,255,0.02);">
+                <div class="p-5 sm:p-6 md:p-8 rounded-2xl border-solid border border-white/10 relative overflow-hidden group" style="background: rgba(255,255,255,0.02);">
                     <h3 class="text-xl font-bold mb-3 text-primary relative z-10">Set Etiquette</h3>
                     <p class="text-white/60 text-sm leading-relaxed relative z-10">Quiet, fast, and out of the way when not needed. Jane respects set hierarchy and works with ADs and UPMs to stay within the production's scheduling requirements.</p>
                 </div>

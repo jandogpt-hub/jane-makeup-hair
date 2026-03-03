@@ -75,27 +75,27 @@ require_once __DIR__ . '/../includes/header.php';
                 <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tighter">What's Included in Every Bridal Package</h2>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
+                <div class="p-5 sm:p-6 md:p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
                     <h3 class="text-xl font-bold mb-3 text-primary">Bridal Trial Session</h3>
                     <p class="text-white/60 text-sm leading-relaxed">Test your complete makeup and hair look weeks before the wedding. Arrive on your day with total confidence — every detail already refined and approved.</p>
                 </div>
-                <div class="p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
+                <div class="p-5 sm:p-6 md:p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
                     <h3 class="text-xl font-bold mb-3 text-primary">Wedding Day Application</h3>
                     <p class="text-white/60 text-sm leading-relaxed">Full makeup and hair application at your location. Jane is punctual, calm, and efficient — your timeline stays on track no matter how many people are in your party.</p>
                 </div>
-                <div class="p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
+                <div class="p-5 sm:p-6 md:p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
                     <h3 class="text-xl font-bold mb-3 text-primary">Bridal Party Coordination</h3>
                     <p class="text-white/60 text-sm leading-relaxed">Bridesmaid makeup, mother of the bride, flower girls — Jane scales to your entire group with staggered booking and precision timing built into every quote.</p>
                 </div>
-                <div class="p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
+                <div class="p-5 sm:p-6 md:p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
                     <h3 class="text-xl font-bold mb-3 text-primary">Airbrush Option</h3>
                     <p class="text-white/60 text-sm leading-relaxed">Airbrush foundation and setting for brides who want a flawless, weightless finish that holds through heat, emotion, and a full night of dancing without transfer.</p>
                 </div>
-                <div class="p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
+                <div class="p-5 sm:p-6 md:p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
                     <h3 class="text-xl font-bold mb-3 text-primary">Hair Styling</h3>
                     <p class="text-white/60 text-sm leading-relaxed">Classic updo, romantic loose waves, braided styles, or sleek blowout — Jane sculpts and pins with the same precision she brings to editorial and film shoots.</p>
                 </div>
-                <div class="p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
+                <div class="p-5 sm:p-6 md:p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
                     <h3 class="text-xl font-bold mb-3 text-primary">On-Location</h3>
                     <p class="text-white/60 text-sm leading-relaxed">Jane travels to West Hollywood, Beverly Hills, Santa Monica, Burbank, and beyond. Travel fee applies outside the primary service radius — ask when booking.</p>
                 </div>

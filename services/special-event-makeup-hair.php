@@ -53,27 +53,27 @@ require_once __DIR__ . '/../includes/header.php';
                 <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tighter">Events We Specialize In</h2>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
+                <div class="p-5 sm:p-6 md:p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
                     <h3 class="text-xl font-bold mb-3 text-primary">Galas & Black-Tie Events</h3>
                     <p class="text-white/60 text-sm leading-relaxed">Polished, editorial makeup and hair built for ballroom lighting, press photographers, and a full evening of looking your best.</p>
                 </div>
-                <div class="p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
+                <div class="p-5 sm:p-6 md:p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
                     <h3 class="text-xl font-bold mb-3 text-primary">Red Carpet & Award Ceremonies</h3>
                     <p class="text-white/60 text-sm leading-relaxed">HD-ready makeup with precise contouring and a hair style that reads from every angle — on a camera lens and in person.</p>
                 </div>
-                <div class="p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
+                <div class="p-5 sm:p-6 md:p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
                     <h3 class="text-xl font-bold mb-3 text-primary">Prom & Homecoming</h3>
                     <p class="text-white/60 text-sm leading-relaxed">A full glam experience at home before the big night. Jane coordinates timing so you arrive camera-ready without any rushing.</p>
                 </div>
-                <div class="p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
+                <div class="p-5 sm:p-6 md:p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
                     <h3 class="text-xl font-bold mb-3 text-primary">Quinceañeras & Debutante</h3>
                     <p class="text-white/60 text-sm leading-relaxed">Classic, romantic, and luminous looks for one of the most photographed days of your life — delivered with care and precision.</p>
                 </div>
-                <div class="p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
+                <div class="p-5 sm:p-6 md:p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
                     <h3 class="text-xl font-bold mb-3 text-primary">Birthday Glam</h3>
                     <p class="text-white/60 text-sm leading-relaxed">Whether it's an intimate dinner or a full celebration, Jane creates a bold, unforgettable look that captures every moment beautifully.</p>
                 </div>
-                <div class="p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
+                <div class="p-5 sm:p-6 md:p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
                     <h3 class="text-xl font-bold mb-3 text-primary">Corporate & Award Events</h3>
                     <p class="text-white/60 text-sm leading-relaxed">Polished, professional makeup for keynotes, panels, corporate headshots, and award presentations — confident without being overdone.</p>
                 </div>
@@ -89,15 +89,15 @@ require_once __DIR__ . '/../includes/header.php';
                 <p class="text-white/70">Beyond makeup, Jane brings full hair finishing to every event booking. Her editorial background means every updo, wave pattern, and blowout is structured to last all night and read beautifully in photos — not just look good in the dressing room mirror.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
+                <div class="p-5 sm:p-6 md:p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
                     <h3 class="text-xl font-bold mb-3 text-primary">Classic & Braided Updos</h3>
                     <p class="text-white/60 text-sm leading-relaxed">Chignons, French twists, braided updos, and romantic loose pinned styles anchored to last the full event.</p>
                 </div>
-                <div class="p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
+                <div class="p-5 sm:p-6 md:p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
                     <h3 class="text-xl font-bold mb-3 text-primary">Waves & Curls</h3>
                     <p class="text-white/60 text-sm leading-relaxed">Vintage Hollywood waves, loose beach waves, defined spiral curls — styled with the heat tools and products that hold under venue conditions.</p>
                 </div>
-                <div class="p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
+                <div class="p-5 sm:p-6 md:p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
                     <h3 class="text-xl font-bold mb-3 text-primary">Sleek Blowouts & Finishes</h3>
                     <p class="text-white/60 text-sm leading-relaxed">Straight and sleek, volumizing, or bouncy curl blowouts — the polished finishing touch for any event look.</p>
                 </div>

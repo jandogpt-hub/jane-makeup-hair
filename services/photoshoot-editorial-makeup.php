@@ -54,27 +54,27 @@ require_once __DIR__ . '/../includes/header.php';
                 <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tighter">Shoots We Work On</h2>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
+                <div class="p-5 sm:p-6 md:p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
                     <h3 class="text-xl font-bold mb-3 text-primary">Headshots & Corporate</h3>
                     <p class="text-white/60 text-sm leading-relaxed">Actor headshots, LinkedIn portraits, executive profiles — clean, polished, and natural. Makeup that says "confident" without looking like makeup on camera.</p>
                 </div>
-                <div class="p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
+                <div class="p-5 sm:p-6 md:p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
                     <h3 class="text-xl font-bold mb-3 text-primary">Boudoir & Glamour</h3>
                     <p class="text-white/60 text-sm leading-relaxed">Built for the mood and the lighting of your specific session. Dramatic, soft, retro, or editorial — Jane collaborates with your photographer to match the look to the concept.</p>
                 </div>
-                <div class="p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
+                <div class="p-5 sm:p-6 md:p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
                     <h3 class="text-xl font-bold mb-3 text-primary">Maternity & Family</h3>
                     <p class="text-white/60 text-sm leading-relaxed">Luminous, timeless, and natural — makeup that photographs beautifully and feels comfortable across a multi-hour portrait session outdoors or in-studio.</p>
                 </div>
-                <div class="p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
+                <div class="p-5 sm:p-6 md:p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
                     <h3 class="text-xl font-bold mb-3 text-primary">Lookbooks & Brand Content</h3>
                     <p class="text-white/60 text-sm leading-relaxed">E-commerce, brand campaigns, seasonal lookbooks — makeup calibrated for the brand's visual world, consistent across a full day of multiple looks.</p>
                 </div>
-                <div class="p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
+                <div class="p-5 sm:p-6 md:p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
                     <h3 class="text-xl font-bold mb-3 text-primary">Editorial & Fashion</h3>
                     <p class="text-white/60 text-sm leading-relaxed">High fashion, avant-garde, or beauty editorial. Jane works from mood boards, references, and direct creative direction to deliver looks that belong in print.</p>
                 </div>
-                <div class="p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
+                <div class="p-5 sm:p-6 md:p-8 rounded-2xl border-solid border border-white/10" style="background: rgba(255,255,255,0.02);">
                     <h3 class="text-xl font-bold mb-3 text-primary">Hair Finishing for Shoots</h3>
                     <p class="text-white/60 text-sm leading-relaxed">Blowouts, waves, or styled finishes added to any photoshoot booking. Hair that reads through the lens with the same precision as the makeup.</p>
                 </div>
@@ -89,17 +89,17 @@ require_once __DIR__ . '/../includes/header.php';
                 <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tighter mb-4">How a Photoshoot Booking Works</h2>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="p-8 rounded-2xl border-solid border border-white/10 relative overflow-hidden group" style="background: rgba(255,255,255,0.02);">
+                <div class="p-5 sm:p-6 md:p-8 rounded-2xl border-solid border border-white/10 relative overflow-hidden group" style="background: rgba(255,255,255,0.02);">
                     <span class="absolute -right-4 -top-8 text-[120px] font-black text-white/[0.03] group-hover:text-primary/10 transition-colors">1</span>
                     <h3 class="text-xl font-bold mb-3 text-primary relative z-10">Share the Concept</h3>
                     <p class="text-white/60 text-sm leading-relaxed relative z-10">Send Jane your mood board, photographer name, shoot location, and any references. She prepares the right kit and any specialty products ahead of time.</p>
                 </div>
-                <div class="p-8 rounded-2xl border-solid border border-white/10 relative overflow-hidden group" style="background: rgba(255,255,255,0.02);">
+                <div class="p-5 sm:p-6 md:p-8 rounded-2xl border-solid border border-white/10 relative overflow-hidden group" style="background: rgba(255,255,255,0.02);">
                     <span class="absolute -right-4 -top-8 text-[120px] font-black text-white/[0.03] group-hover:text-primary/10 transition-colors">2</span>
                     <h3 class="text-xl font-bold mb-3 text-primary relative z-10">She Arrives Set-Ready</h3>
                     <p class="text-white/60 text-sm leading-relaxed relative z-10">Jane shows up with everything needed — lighting reference, pro kit, and hair tools if included. Setup takes minutes so your shoot time is protected.</p>
                 </div>
-                <div class="p-8 rounded-2xl border-solid border border-white/10 relative overflow-hidden group" style="background: rgba(255,255,255,0.02);">
+                <div class="p-5 sm:p-6 md:p-8 rounded-2xl border-solid border border-white/10 relative overflow-hidden group" style="background: rgba(255,255,255,0.02);">
                     <span class="absolute -right-4 -top-8 text-[120px] font-black text-white/[0.03] group-hover:text-primary/10 transition-colors">3</span>
                     <h3 class="text-xl font-bold mb-3 text-primary relative z-10">Collaborate & Adjust</h3>
                     <p class="text-white/60 text-sm leading-relaxed relative z-10">Jane checks the monitor with your photographer between setups and adjusts in real time. What you see on camera is exactly what was intended.</p>
