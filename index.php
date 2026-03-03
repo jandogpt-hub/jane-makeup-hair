@@ -103,12 +103,12 @@ $gallery_images = [
             <div class="hidden md:block absolute inset-0 bg-cover bg-center bg-fixed filter grayscale brightness-75"
                  style="background-image: url('https://res.cloudinary.com/jane-makeup-hair/image/upload/w_2400,h_1600,c_fill,g_face,q_80,fl_keep_iptc/v1772164687/janes-makeup-hair-headshot_m3azif.jpg');"></div>
             
-            <!-- Mobile: Static img tag using scaled crop to prevent iOS rendering bugs -->
-            <img class="block md:hidden w-full h-full object-cover object-center filter grayscale brightness-[0.65]"
+            <!-- Mobile: Static img tag using portrait crop to fit phone screens properly -->
+            <img class="block md:hidden w-full h-full min-w-full min-h-full max-w-none object-cover object-center filter grayscale brightness-[0.65]"
                  alt="Jane — West Hollywood mobile makeup and hair artist"
-                 src="https://res.cloudinary.com/jane-makeup-hair/image/upload/w_800,c_scale,q_80,fl_keep_iptc/v1772164687/janes-makeup-hair-headshot_m3azif.jpg"
-                 width="800"
-                 height="1200"
+                 src="https://res.cloudinary.com/jane-makeup-hair/image/upload/w_1000,h_1500,c_fill,g_face,q_80,fl_keep_iptc/v1772164687/janes-makeup-hair-headshot_m3azif.jpg"
+                 width="1000"
+                 height="1500"
                  fetchpriority="high"
                  decoding="async"/>
             
