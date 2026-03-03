@@ -95,6 +95,15 @@ include_once __DIR__ . '/config.php';
             backdrop-filter: blur(12px);
             border: 1px solid rgba(201, 168, 76, 0.15);
         }
+        
+        /* Safe text wrapping for massive display fonts on narrow screens */
+        h1, h2, h3, h4, h5, h6 {
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            -webkit-hyphens: auto;
+            hyphens: auto;
+        }
+
         .text-outline {
             -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
             color: transparent;
