@@ -13,7 +13,7 @@ require_once __DIR__ . '/includes/header.php';
     <!-- HERO -->
     <section class="relative px-6 py-24 md:py-32 overflow-hidden border-solid border-b border-white/10">
         <div class="absolute inset-0 z-0">
-            <img class="w-full h-full min-w-full min-h-full max-w-none object-cover object-top opacity-20 filter grayscale" alt="Jane, professional mobile makeup artist and hairstylist based in Los Angeles" src="https://res.cloudinary.com/jane-makeup-hair/image/upload/w_2000,h_1333,c_fill,g_face,q_80,fl_keep_iptc/v1772246476/jane-mobile-makeup-hair-west-hollywood-010_ehtzdf.jpg" />
+            <img class="w-full h-full min-w-full min-h-full max-w-none object-cover object-top opacity-20 filter grayscale" alt="Jane, professional mobile makeup artist and hairstylist based in Los Angeles" src="https://res.cloudinary.com/jane-makeup-hair/image/upload/w_2000,h_1333,c_fill,g_face,q_80,fl_keep_iptc/v1772504430/jane-makeup-hair-west-hollywood-about-us_wp0eip.jpg" />
             <div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/80 to-transparent"></div>
         </div>
         <div class="container relative z-10 max-w-4xl mx-auto text-center">
