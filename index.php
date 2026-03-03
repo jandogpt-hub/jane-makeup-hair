@@ -116,7 +116,7 @@ $gallery_images = [
         </div>
 
         <!-- Semantic triplet: WHO + WHAT + WHERE -->
-        <div class="relative z-20 text-center px-4">
+        <div class="relative z-20 text-center px-4 pt-48 md:pt-56 lg:pt-0">
 
             <!-- WHO -->
             <h1 class="font-bold leading-none uppercase tracking-tighter">
