@@ -234,7 +234,7 @@ $gallery_images = [
         <div class="flex flex-col md:flex-row items-start md:items-end justify-between gap-6 md:gap-0 mb-16 border-b border-white/10 pb-6">
             <div>
                 <h3 class="text-[10px] md:text-xs font-bold text-primary uppercase tracking-[0.3em] md:tracking-[0.45em] mb-4">Our Artistry</h3>
-                <h2 class="text-4xl md:text-5xl font-black tracking-tighter uppercase leading-none text-white">Signature Services</h2>
+                <h2 class="text-[8.5vw] md:text-5xl font-black tracking-tighter uppercase leading-none text-white">Signature Services</h2>
             </div>
             <a class="text-primary text-sm font-bold border-b border-primary pb-1 uppercase tracking-widest hover:text-white hover:border-white transition-colors flex-shrink-0" href="#">See All</a>
         </div>
@@ -282,7 +282,7 @@ $gallery_images = [
         <!-- Section header -->
         <header class="relative z-10 text-center mb-20">
             <p class="text-xs font-bold uppercase tracking-[0.45em] text-primary mb-4">West Hollywood's Choice</p>
-            <h2 class="text-4xl md:text-6xl font-black uppercase tracking-tighter leading-none mb-6">
+            <h2 class="text-[9.5vw] md:text-6xl font-black uppercase tracking-tighter leading-none mb-6">
                 Why Choose<br>
                 <span class="text-primary">Jane Makeup &amp; Hair</span>
             </h2>
@@ -624,7 +624,7 @@ $gallery_images = [
         <!-- Section header -->
         <header class="relative z-10 text-center mb-16">
             <p class="text-xs font-bold uppercase tracking-[0.45em] text-primary mb-4">Client Stories</p>
-            <h2 class="text-4xl md:text-5xl font-black uppercase tracking-tighter leading-none">
+            <h2 class="text-[8.5vw] md:text-5xl font-black uppercase tracking-tighter leading-none">
                 What Clients<br><span class="text-primary">Are Saying</span>
             </h2>
         </header>

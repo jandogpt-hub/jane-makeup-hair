@@ -14,7 +14,7 @@ require_once __DIR__ . '/../includes/header.php'; ?>
         </div>
         <div class="container relative z-10 max-w-4xl mx-auto text-center">
             <p class="text-xs font-bold uppercase tracking-[0.45em] text-primary mb-4">Service Area</p>
-            <h1 class="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-6 leading-none">Makeup Artist Studio City</h1>
+            <h1 class="text-[9.5vw] md:text-6xl font-black uppercase tracking-tighter mb-6 leading-none">Makeup Artist Studio City</h1>
             <p class="text-lg md:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">Jane provides luxury mobile makeup and hair services throughout Studio City — at your hotel, home, or venue.</p>
         </div>
     </section>
@@ -69,7 +69,7 @@ require_once __DIR__ . '/../includes/header.php'; ?>
     <!-- CTA -->
     <section class="px-6 py-32 relative text-center border-solid border-t border-white/10" style="background: rgba(255,255,255,0.01);">
         <div class="container max-w-3xl mx-auto relative z-10">
-            <h2 class="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-8">Book Your Session in <?php echo $city; ?></h2>
+            <h2 class="text-[8.5vw] md:text-5xl font-black uppercase tracking-tighter mb-8">Book Your Session in <?php echo $city; ?></h2>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="/contact.php" class="px-8 py-4 bg-primary text-background-dark font-black text-sm uppercase tracking-widest rounded-full hover:bg-primary-hover transition-colors shadow-lg" style="box-shadow: 0 0 30px rgba(201,168,76,0.35);">Book Jane</a>
             </div>

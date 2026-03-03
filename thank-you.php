@@ -10,7 +10,7 @@ require_once __DIR__ . '/includes/header.php';
 
 <main class="bg-background-dark text-white pt-32 pb-24 font-display min-h-[80vh] flex items-center justify-center border-t border-solid border-white/10" style="background: rgba(255,255,255,0.01);">
     <div class="container px-6 text-center max-w-2xl mx-auto">
-        <h1 class="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-4 text-primary">You're All Set!</h1>
+        <h1 class="text-[8.5vw] md:text-5xl font-black uppercase tracking-tighter mb-4 text-primary">You're All Set!</h1>
         <p class="text-white/80 text-lg mb-4">Thank you for reaching out. Jane will be in touch within 24 hours to confirm your booking details.</p>
         <p class="text-white/50 text-base mb-8">In the meantime, check out the gallery for inspiration.</p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">

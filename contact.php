@@ -18,7 +18,7 @@ require_once __DIR__ . '/includes/header.php';
         </div>
         <div class="container relative z-10 max-w-4xl mx-auto text-center">
             <p class="text-xs font-bold uppercase tracking-[0.45em] text-primary mb-4">Inquire</p>
-            <h1 class="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-6 leading-none">Book Your Session</h1>
+            <h1 class="text-[9.5vw] md:text-6xl font-black uppercase tracking-tighter mb-6 leading-none">Book Your Session</h1>
             <p class="text-lg md:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">Tell Jane about your event. All services are mobile — she comes to you.</p>
         </div>
     </section>

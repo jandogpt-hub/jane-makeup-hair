@@ -22,7 +22,7 @@ require_once __DIR__ . '/../includes/header.php';
         </div>
         <div class="container relative z-10 max-w-4xl mx-auto text-center">
             <p class="text-xs font-bold uppercase tracking-[0.45em] text-primary mb-4">West Hollywood's Choice</p>
-            <h1 class="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-6 leading-none">Photoshoot & Editorial Makeup</h1>
+            <h1 class="text-[9.5vw] md:text-6xl font-black uppercase tracking-tighter mb-6 leading-none">Photoshoot & Editorial Makeup</h1>
             <p class="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed">From headshots to high-fashion lookbooks — Jane delivers makeup and hair crafted specifically for how a camera sees it, not just how a mirror does.</p>
             <a href="/contact.php" class="inline-flex px-8 py-4 bg-primary text-background-dark font-black text-sm uppercase tracking-widest rounded-full hover:bg-primary-hover transition-colors shadow-lg" style="box-shadow: 0 0 30px rgba(201,168,76,0.35);">Book Your Shoot</a>
         </div>
@@ -135,7 +135,7 @@ require_once __DIR__ . '/../includes/header.php';
     <!-- CTA -->
     <section class="px-6 py-32 relative text-center">
         <div class="container max-w-3xl mx-auto relative z-10">
-            <h2 class="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-6">Book Jane for Your Shoot</h2>
+            <h2 class="text-[8.5vw] md:text-5xl font-black uppercase tracking-tighter mb-6">Book Jane for Your Shoot</h2>
             <p class="text-lg text-white/70 mb-10 leading-relaxed">Share your shoot date, concept, and location. Jane will confirm availability and discuss the look before your session so you're both aligned from the first frame.</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="/contact.php" class="px-8 py-4 bg-primary text-background-dark font-black text-sm uppercase tracking-widest rounded-full hover:bg-primary-hover transition-colors shadow-lg" style="box-shadow: 0 0 30px rgba(201,168,76,0.35);">Book Your Photoshoot</a>

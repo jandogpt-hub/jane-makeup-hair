@@ -21,7 +21,7 @@ require_once __DIR__ . '/../includes/header.php';
         </div>
         <div class="container relative z-10 max-w-4xl mx-auto text-center">
             <p class="text-xs font-bold uppercase tracking-[0.45em] text-primary mb-4">West Hollywood's Choice</p>
-            <h1 class="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-6 leading-none">Mobile Bridal Makeup & Hair</h1>
+            <h1 class="text-[9.5vw] md:text-6xl font-black uppercase tracking-tighter mb-6 leading-none">Mobile Bridal Makeup & Hair</h1>
             <p class="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed">Jane arrives at your venue fully equipped — flawless bridal makeup and hair styling that photographs beautifully and lasts all day and night, without a single touch-up.</p>
             <a href="/contact.php" class="inline-flex px-8 py-4 bg-primary text-background-dark font-black text-sm uppercase tracking-widest rounded-full hover:bg-primary-hover transition-colors shadow-lg" style="box-shadow: 0 0 30px rgba(201,168,76,0.35);">Book Your Bridal Trial</a>
         </div>
@@ -48,7 +48,7 @@ require_once __DIR__ . '/../includes/header.php';
     <section class="px-6 py-24 border-y border-white/10 relative overflow-hidden" style="background: linear-gradient(180deg, rgba(201,168,76,0.03) 0%, transparent 100%);">
         <div class="container max-w-6xl mx-auto text-center mb-16">
             <p class="text-xs font-bold uppercase tracking-[0.45em] text-primary mb-4">Portfolio</p>
-            <h2 class="text-4xl md:text-5xl font-black uppercase tracking-tighter">Real Brides &amp; Bridal Parties</h2>
+            <h2 class="text-[8.5vw] md:text-5xl font-black uppercase tracking-tighter">Real Brides &amp; Bridal Parties</h2>
         </div>
         <div class="container max-w-6xl mx-auto">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -130,7 +130,7 @@ require_once __DIR__ . '/../includes/header.php';
     <!-- CTA -->
     <section class="px-6 py-32 relative text-center">
         <div class="container max-w-3xl mx-auto relative z-10">
-            <h2 class="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-6">Ready to See Your Bridal Look?</h2>
+            <h2 class="text-[8.5vw] md:text-5xl font-black uppercase tracking-tighter mb-6">Ready to See Your Bridal Look?</h2>
             <p class="text-lg text-white/70 mb-10 leading-relaxed">Book a trial session and walk into your wedding day knowing exactly how stunning you'll look — no surprises, only confidence.</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="/contact.php" class="px-8 py-4 bg-primary text-background-dark font-black text-sm uppercase tracking-widest rounded-full hover:bg-primary-hover transition-colors shadow-lg" style="box-shadow: 0 0 30px rgba(201,168,76,0.35);">Book Your Bridal Trial</a>
