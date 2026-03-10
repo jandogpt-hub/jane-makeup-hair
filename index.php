@@ -947,7 +947,7 @@ $gallery_images = [
             }
         }
     </style>
-    <section class="py-24 relative overflow-hidden bg-background-dark/50">
+    <section id="gallery" class="py-24 relative overflow-hidden bg-background-dark/50">
         <h2 class="text-center text-xs font-bold text-primary uppercase tracking-[0.3em] mb-8">West Hollywood and Surrounding Areas Clients</h2>
         
         <!-- Mobile/Touch scroll hint -->

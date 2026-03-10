@@ -46,12 +46,12 @@ define('SOCIAL_YELP',      'https://www.yelp.com/biz/janemakeup-beverly-hills-4'
 // Used to auto-build nav dropdowns, footer links, and cross-linking sections.
 // =============================================
 $services = [
-    ['name' => 'Mobile Bridal Makeup & Hair',       'slug' => 'mobile-bridal-makeup-hair',       'icon' => '💍'],
-    ['name' => 'Special Event Makeup & Hair',       'slug' => 'special-event-makeup-hair',     'icon' => '🎭'],
-    ['name' => 'Film, TV & Production Makeup',      'slug' => 'film-tv-production-makeup',     'icon' => '🎬'],
-    ['name' => 'Photoshoot & Editorial Makeup',     'slug' => 'photoshoot-editorial-makeup',   'icon' => '📸'],
-    ['name' => 'Airbrush Makeup',                   'slug' => 'airbrush-makeup',               'icon' => '🎨'],
-    ['name' => 'Special Effects & Halloween Makeup','slug' => 'special-effects-halloween',     'icon' => '🎃'],
+    ['name' => 'Mobile Bridal Makeup & Hair',       'slug' => 'mobile-bridal-makeup-hair',       'icon' => 'diamond'],
+    ['name' => 'Special Event Makeup & Hair',       'slug' => 'special-event-makeup-hair',     'icon' => 'stars'],
+    ['name' => 'Film, TV & Production Makeup',      'slug' => 'film-tv-production-makeup',     'icon' => 'movie'],
+    ['name' => 'Photoshoot & Editorial Makeup',     'slug' => 'photoshoot-editorial-makeup',   'icon' => 'photo_camera'],
+    ['name' => 'Airbrush Makeup',                   'slug' => 'airbrush-makeup',               'icon' => 'air'],
+    ['name' => 'Special Effects & Halloween Makeup','slug' => 'special-effects-halloween',     'icon' => 'masks'],
 ];
 
 // =============================================

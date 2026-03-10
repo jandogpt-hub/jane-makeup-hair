@@ -35,11 +35,11 @@ require_once __DIR__ . '/../includes/header.php'; ?>
     <section class="px-6 py-20 border-solid border-t border-white/10" style="background: rgba(255,255,255,0.01);">
         <div class="container max-w-6xl mx-auto">
             <h2 class="text-2xl font-bold mb-8 text-center text-primary">Services Jane Offers in <?php echo $city; ?></h2>
-            <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <ul class="list-none p-0 m-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 <?php foreach ($services as $s): ?>
                 <li>
                     <a href="/services/<?php echo $s['slug']; ?>" class="flex items-center gap-3 p-4 rounded-xl border-solid border border-white/5 bg-white/5 hover:bg-white/10 hover:border-white/20 transition-all font-medium">
-                        <span class="text-lg"><?php echo $s['icon']; ?></span>
+                        <span class="material-symbols-outlined text-primary text-xl"><?php echo $s['icon']; ?></span>
                         <span class="text-sm"><?php echo $s['name']; ?> in <?php echo $city; ?></span>
                     </a>
                 </li>

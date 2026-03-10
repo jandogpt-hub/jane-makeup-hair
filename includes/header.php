@@ -191,28 +191,9 @@ include_once __DIR__ . '/config.php';
                     </div>
                 </div>
 
-                <!-- Areas Served Dropdown (From Config) -->
-                <div class="relative group">
-                    <button class="flex items-center gap-1 hover:text-primary transition-colors focus:outline-none py-4 bg-transparent border-none text-white font-medium text-sm tracking-widest uppercase cursor-pointer">
-                        Available In
-                        <svg class="w-4 h-4 text-white/50 group-hover:text-primary transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
-                    <!-- Dropdown Menu -->
-                    <div class="absolute top-full left-0 mt-1 w-56 bg-[#111111]/95 backdrop-blur-xl border border-white/15 border-t-2 border-t-[#C9A84C] rounded-sm shadow-2xl shadow-black/80 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-left z-50 max-h-[60vh] overflow-y-auto">
-                        <div class="py-1 flex flex-col">
-                            <?php if(!empty($areas)): foreach($areas as $a): ?>
-                            <a href="/area-served/<?php echo $a['slug']; ?>.php" class="px-5 py-3.5 hover:bg-[#C9A84C]/10 hover:text-[#C9A84C] text-white transition-colors border-b border-white/8 flex items-center justify-between group/item font-medium tracking-wide text-sm">
-                                <?php echo $a['name']; ?>
-                                <span class="text-[#C9A84C] opacity-0 group-hover/item:opacity-100 transition-opacity">→</span>
-                            </a>
-                            <?php endforeach; endif; ?>
-                        </div>
-                    </div>
-                </div>
+                <a class="hover:text-primary transition-colors" href="/contact.php">Contact Us</a>
 
-                <a class="hover:text-primary transition-colors" href="/gallery.php">Folio</a>
+                <a class="hover:text-primary transition-colors" href="/#gallery">Portfolio</a>
                 <a class="hover:text-primary transition-colors" href="/about.php">About</a>
             </div>
 
@@ -248,15 +229,9 @@ include_once __DIR__ . '/config.php';
                 <?php endforeach; endif; ?>
              </div>
 
-             <a href="/gallery.php" class="text-2xl font-bold text-white border-b border-white/20 pb-4 mt-4 uppercase tracking-tighter">Folio</a>
+             <a href="/#gallery" class="text-2xl font-bold text-white border-b border-white/20 pb-4 mt-4 uppercase tracking-tighter">Portfolio</a>
              
-             <!-- Mobile Areas -->
-             <div class="flex flex-col gap-5 border-b border-white/20 pb-6 mt-4">
-                <span class="text-xs font-black text-primary uppercase tracking-[0.2em] opacity-100">Available In</span>
-                <?php if(!empty($areas)): foreach($areas as $a): ?>
-                <a href="/area-served/<?php echo $a['slug']; ?>.php" class="text-xl text-white font-medium pl-4 border-l-2 border-white/20 hover:border-primary hover:text-primary transition-all"><?php echo $a['name']; ?></a>
-                <?php endforeach; endif; ?>
-             </div>
+             <a href="/contact.php" class="text-2xl font-bold text-white border-b border-white/20 pb-4 mt-4 uppercase tracking-tighter">Contact Us</a>
              
              <a href="/about.php" class="text-2xl font-bold text-white border-b border-white/20 pb-4 uppercase tracking-tighter mt-2">About Jane</a>
              
